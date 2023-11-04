@@ -1,0 +1,45 @@
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.body-guest {
+    background-color: #3772FF;
+    padding-top: 130px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section-login{
+    text-align: center;
+}
+.button-providers-login {
+    color: #FFFFFF;
+    background-color: #FC7071;
+    width: 362px;
+    height: 48px;
+    text-align: center;
+}
+
+.frases-guest {
+    color: #FFFFFF;
+}
+.h2-guest {
+    text-align: center;
+    font-size: 28px;
+}
+
+.p-guest {
+    text-align: center;
+    font-size: 18px;
+}
+
+footer {
+    background-color: #36D6AD;
+    color: #FFFFFF;
+    font-size: 16px;
+    text-align: center;
+    line-height: 24px;
+}
