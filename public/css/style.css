@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;500;600&display=swap');
+
+/* zerando config padrões */
 * {
     border: 0;
     box-sizing: border-box;
@@ -6,29 +9,81 @@
     text-decoration: none;
 }
 
+main {
+    min-height: 100vh;
+}
+
+/* flex-grow, flex-shrink, e flex-basis */
+section {
+    flex: 1 1 auto;
+}
+
+/* rolagem suave de uma pag para outra */
+html {
+    scroll-behavior: smooth; 
+}
+
 .body-guest {
     background-color: #3772FF;
-    padding-top: 130px;
     font-family: 'Poppins', sans-serif;
 }
 
-.section-login{
-    text-align: center;
+/* .App {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+} */
+
+
+.img-header-esquerdo {
+    content: '';
+    background: url('./public/build/images/header-bg.svg') no-repeat;
+    background-position: left top;
+    background-size: 100%;
+    width: 22rem;
+    height: 18.5rem;
+    position: absolute;
+    z-index: -1;
 }
+
+.section-login{
+    display: flex;
+    text-align: center;
+    gap: 25px;
+    font-weight: 500;
+    flex-direction: column;
+    margin-top: 30px;
+    color: white;
+}
+
 .button-providers-login {
-    color: #FFFFFF;
+    width: 50vw;
     background-color: #FC7071;
-    width: 362px;
-    height: 48px;
+    padding: 5px 50px 5px 50px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    text-align: center;
+    box-shadow: 2px 2px 4px #00000040;
+    transition: 0.3s background;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.logo {
+    margin-bottom: 150px;
+}
+.frases-guest {
+    color: #FFFFFF;
+    padding-top: 150px;
     text-align: center;
 }
 
-.frases-guest {
-    color: #FFFFFF;
-}
 .h2-guest {
     text-align: center;
     font-size: 28px;
+    margin-bottom: 30px;
 }
 
 .p-guest {
@@ -37,9 +92,27 @@
 }
 
 footer {
+    display: flex;
+    flex: 0 1 auto;
+    align-items: center;
+    position: relative;
     background-color: #36D6AD;
     color: #FFFFFF;
-    font-size: 16px;
-    text-align: center;
+    font-size: 15px;
+    justify-content: center;
     line-height: 24px;
+    padding: 10px;
 }
+
+
+
+/* .footer__img {
+    display: block;
+    margin: 1.5rem auto -1.125rem;
+}
+
+.footer a {
+    color: var(--white);
+    border-bottom: 1px solid;
+    transition: 0.3s color;
+} */
