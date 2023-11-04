@@ -7,6 +7,7 @@
 
         <!-- Email Address -->
         <section class="section-login">
+            <p>Faça login com:</p>
             <article>
                 <a href="{{ route('login.social.redirect', 'google') }}" type="button" class="button-providers-login">
                     Google

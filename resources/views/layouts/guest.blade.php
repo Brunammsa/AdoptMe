@@ -7,20 +7,19 @@
 
         <title>{{ config('app.name') }}</title>
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    
     </head>
     <body class="body-guest">
+        <header>
+            <img src="public/build/images/header-bg.svg" alt="" class="img-header-esquerdo">
+        </header>
         <div class="main-guest">
             <main>
-                <img src="public/build/imagens/Logo.png">LOGO
                 <section>
                     <article class="frases-guest">
+                        <img src="public/build/imagens/Logo.png" class="logo">
                         <h2 class="h2-guest">Boas Vindas</h2>
-                        <p class="p-guest">Adotar pode mudar uma vida. Que tal buscar 
+                        <p class="p-guest">Adotar pode mudar uma vida. Que tal buscar<br>
                         seu novo melhor amigo hoje? Vem com a gente!</p>
                     </article>
             
@@ -30,7 +29,7 @@
                 </section>
             </main>
             <footer>
-                2023 - Desenvolvido para fins de estudos para uso gratuito - BMMSA
+                <p>2023 - Desenvolvido por <a href="https://github.com/Brunammsa" target='_blank' rel="noreferrer">BMMSA</a></p>
             </footer>
         </div>
     </body>
