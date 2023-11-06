@@ -14,28 +14,28 @@
         <header>
             <img src="{{ asset('images/header-bg.svg') }}" alt="" class="header-guest-left">
         </header>
-        <div class="container-guest">
+        <div>
             <main class="main-guest">
                 <section>
-                    <div class="logo">
-                        <figure>
-                            <img src="{{ asset('images/logo.png') }}">
-                        </figure>
-                    </div>
-                    <div class="phrases-guest">
+                    <figure class="logo">
+                        <img src="{{ asset('images/logo.png') }}">
+                    </figure>
+                    <article class="welcome-guest">
                         <h2>Boas Vindas</h2>
                         <p class="p-adoptme">Adotar pode mudar uma vida. Que tal buscar<br>
                         seu novo melhor amigo hoje? Vem com a gente!</p>
-                    </div>
-                    <div >
-                        {{ $slot }}
-                    </div>
-                    <img src="{{ asset('images/pets.svg') }}" alt="" class="footer-pets">
+                        <div >
+                            {{ $slot }}
+                        </div>
+                    </article>
                 </section>
-                <aside>
+                <figure>
                     <img src="{{ asset('images/body-bg.svg') }}" alt="" class="header-guest-right">
-                </aside>
+                </figure>
             </main>
+            <figure>
+                <img src="{{ asset('images/pets.svg') }}" alt="" class="footer-pets">
+            </figure>
             <footer>
                 <p>2023 - Desenvolvido por <a href="https://github.com/Brunammsa" target='_blank' rel="noreferrer">BMMSA</a></p>
             </footer>

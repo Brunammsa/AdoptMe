@@ -6,15 +6,15 @@
         @csrf
 
         <!-- Email Address -->
-        <section class="section-login">
-            <p>Faça login com:</p>
+        <section class="login">
+            <p>Faça login com</p>
             <article>
-                <a href="{{ route('login.social.redirect', 'google') }}" type="button" class="button-providers-login">
+                <a href="{{ route('login.social.redirect', 'google') }}" type="button" class="login-button">
                     Google
                 </a>
             </article>
             <article>
-                <a href="{{ route('login.social.redirect', 'facebook') }}" type="button" class="button-providers-login">
+                <a href="{{ route('login.social.redirect', 'facebook') }}" type="button" class="login-button">
                     Facebook
                 </a>
             </article>
