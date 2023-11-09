@@ -6,7 +6,7 @@
         @csrf
 
         <!-- Email Address -->
-        <p>Faça login com</p>
+        <p class="p-login">Faça login com</p>
             <article>
                 <a href="{{ route('login.social.redirect', 'google') }}" type="button" class="login-button">
                     Google

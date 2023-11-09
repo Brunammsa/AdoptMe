@@ -12,9 +12,7 @@
     </head>
     <body class="body-guest">
         <header>
-            <picture>
-                <img src="{{ asset('images/header-bg.svg') }}" alt="imagem esquerda" class="header-guest-left">
-            </picture>
+            <img src="{{ asset('images/header-bg.svg') }}" alt="imagem esquerda" class="header-guest-left">
         </header>
         <div class="main-guest">
             <picture>
@@ -25,8 +23,8 @@
                     <picture>
                         <img src="{{ asset('images/logo.png') }}" class="logo">
                     </picture>
-                    <article>
-                        <h2>Boas-vindas!</h2>
+                    <article class="article-guest">
+                        <h2 class="welcome-guest">Boas-vindas!</h2>
                         <p class="phrase-guest">Adotar pode mudar uma vida. Que tal buscar
                         seu<br> novo melhor amigo hoje? Vem com a gente!</p>
                         <div class="login">
