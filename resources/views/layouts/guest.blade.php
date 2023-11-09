@@ -7,36 +7,41 @@
 
         <title>{{ config('app.name') }}</title>
         <link rel="icon" type="image/x-icon" href="{{ asset("footprint-96.png")}}">
-        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/styleGuest.css') }}" rel="stylesheet">
     
     </head>
     <body class="body-guest">
+        <header>
+            <picture>
+                <img src="{{ asset('images/header-bg.svg') }}" alt="imagem esquerda" class="header-guest-left">
+            </picture>
+        </header>
         <main class="main-guest">
-            <figure>
-                <img src="{{ asset('images/header-bg.svg') }}" alt="" class="header-guest-left">
-            </figure>
             <section class="section-guest">
-                <figure class="logo">
-                    <img src="{{ asset('images/logo.png') }}">
-                </figure>
+                <picture>
+                    <img src="{{ asset('images/logo.png') }}" class="logo">
+                </picture>
                 <article class="welcome-guest">
-                    <h2>Boas Vindas!</h2>
+                    <h2>Boas-vindas!</h2>
                     <p class="p-adoptme">Adotar pode mudar uma vida. Que tal buscar<br>
                     seu novo melhor amigo hoje? Vem com a gente!</p>
-                    <div >
+                    <div class="login">
                         {{ $slot }}
                     </div>
                 </article>
+                <picture>
+                    <img src="{{ asset('images/pets.svg') }}" alt="imagem pets footer" class="footer-pets">
+                </picture>
             </section>
-            <figure>
-                <img src="{{ asset('images/body-bg.svg') }}" alt="" class="header-guest-right">
-            </figure>
+            <aside>
+                <picture>
+                    <img src="{{ asset('images/body-bg.svg') }}" alt="imagem direita" class="header-guest-right">
+                </picture>
+            </aside>
         </main>
-        <figure>
-            <img src="{{ asset('images/pets.svg') }}" alt="" class="footer-pets">
-        </figure>
+
         <footer>
-            <p>2023 - Desenvolvido por <a href="https://github.com/Brunammsa" target='_blank' rel="noreferrer">BMMSA</a></p>
+            <p class="p-footer">2023 - Desenvolvido através do Challenger Alura por <a href="https://github.com/Brunammsa" target='_blank' rel="external">BMMSA</a> para fins gratuitos</p>
         </footer>
     </body>
 </html>

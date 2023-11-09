@@ -6,8 +6,7 @@
         @csrf
 
         <!-- Email Address -->
-        <section class="login">
-            <p>Faça login com</p>
+        <p>Faça login com</p>
             <article>
                 <a href="{{ route('login.social.redirect', 'google') }}" type="button" class="login-button">
                     Google
@@ -18,6 +17,5 @@
                     Facebook
                 </a>
             </article>
-        </section>
     </form>
 </x-guest-layout>
