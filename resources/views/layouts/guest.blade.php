@@ -16,30 +16,32 @@
                 <img src="{{ asset('images/header-bg.svg') }}" alt="imagem esquerda" class="header-guest-left">
             </picture>
         </header>
-        <main class="main-guest">
-            <section class="section-guest">
-                <picture>
-                    <img src="{{ asset('images/logo.png') }}" class="logo">
-                </picture>
-                <article class="welcome-guest">
-                    <h2>Boas-vindas!</h2>
-                    <p class="p-adoptme">Adotar pode mudar uma vida. Que tal buscar<br>
-                    seu novo melhor amigo hoje? Vem com a gente!</p>
-                    <div class="login">
-                        {{ $slot }}
-                    </div>
-                </article>
-                <picture>
-                    <img src="{{ asset('images/pets.svg') }}" alt="imagem pets footer" class="footer-pets">
-                </picture>
-            </section>
-            <aside>
-                <picture>
-                    <img src="{{ asset('images/body-bg.svg') }}" alt="imagem direita" class="header-guest-right">
-                </picture>
-            </aside>
-        </main>
-
+        <div class="main-guest">
+            <picture>
+                <img src="{{ asset('images/body-bg.svg') }}" alt="imagem direita" class="copy-image-right">
+            </picture>
+            <main>                
+                <section class="section-guest">
+                    <picture>
+                        <img src="{{ asset('images/logo.png') }}" class="logo">
+                    </picture>
+                    <article>
+                        <h2>Boas-vindas!</h2>
+                        <p class="phrase-guest">Adotar pode mudar uma vida. Que tal buscar
+                        seu<br> novo melhor amigo hoje? Vem com a gente!</p>
+                        <div class="login">
+                            {{ $slot }}
+                        </div>
+                    </article>
+                    <picture>
+                        <img src="{{ asset('images/pets.svg') }}" alt="imagem pets footer" class="footer-pets">
+                    </picture>
+                </section>
+            </main>
+            <picture>
+                <img src="{{ asset('images/body-bg.svg') }}" alt="imagem direita" class="header-guest-right">
+            </picture>
+        </div>
         <footer>
             <p class="p-footer">2023 - Desenvolvido através do Challenger Alura por <a href="https://github.com/Brunammsa" target='_blank' rel="external">BMMSA</a> para fins gratuitos</p>
         </footer>
