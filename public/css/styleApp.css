@@ -13,13 +13,8 @@
 html {
     scroll-behavior: smooth; 
 }
-.body-guest {
-    background-color: #3772FF;
-}
-
-.main-guest {
-    display: flex;
-    justify-content: space-between;
+.body-app {
+    background-color: white;
 }
 
 .header-guest-left {
@@ -34,6 +29,18 @@ html {
     background-size: 100%;
     margin-top: 130px;
     z-index: -1;
+}
+
+.main-app{
+    font-family: 'Poppins', sans-serif;
+}
+
+.usuario-app{
+    max-width: 10%;
+}
+
+p{
+    text-align: center;
 }
 
 .copy-image-right{
