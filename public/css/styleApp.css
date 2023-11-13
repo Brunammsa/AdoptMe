@@ -35,6 +35,12 @@ html {
     font-family: 'Poppins', sans-serif;
 }
 
+.logo-app{
+    display: flex;
+    align-items: center;
+    max-width: 50%;
+}
+
 .usuario-app{
     max-width: 50%;
 }
