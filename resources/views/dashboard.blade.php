@@ -3,7 +3,6 @@
             <p>Olá! Veja os amigos disponíveis para adoção!</p>
             <div>
                 <div class="pets">
-
                     {{ __("You're logged in!") }}
                 </div>
             </div>
