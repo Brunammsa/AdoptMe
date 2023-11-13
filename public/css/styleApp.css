@@ -36,11 +36,24 @@ html {
 }
 
 .usuario-app{
-    max-width: 10%;
+    max-width: 50%;
+}
+
+.section-app{
+    max-width: 80rem;
+    margin: auto;
+    padding: 8rem;
+}
+
+.pets{
+margin-top: 3rem;
 }
 
 p{
+    margin-top: 50px;
     text-align: center;
+    color: #3772FF;
+    font-weight: 600;
 }
 
 .copy-image-right{

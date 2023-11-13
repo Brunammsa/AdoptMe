@@ -7,7 +7,7 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
         <link rel="icon" type="image/x-icon" href="{{ asset("footprint-96.png")}}">
-        <link href="{{ asset('css/styleGuest.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/styleApp.css') }}" rel="stylesheet">
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
