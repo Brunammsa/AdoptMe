@@ -36,8 +36,6 @@ html {
 }
 
 .logo-app{
-    display: flex;
-    align-items: center;
     max-width: 50%;
 }
 
@@ -52,7 +50,9 @@ html {
 }
 
 .pets{
-margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
 }
 
 p{
@@ -62,45 +62,9 @@ p{
     font-weight: 600;
 }
 
-.copy-image-right{
-    visibility: hidden;
-}
-
-.section-guest {
+.perfil-app{
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    height: auto;
-}
-
-.logo{
-    margin-top: 110px;
-}
-
-.welcome-guest{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-weight: 300;
-}
-
-/* login area */
-.login{
-    margin-top: 20px;
-}
-.login-button {
-    display: inline-block;
-    width: 20rem;
-    background-color: #FC7071;
-    font-weight: 600;
-    font-size: 1vw;
-    text-align: center;
-    box-shadow: 2px 2px 4px #00000040;
-    border-radius: 7px;
-    color: white;
-    padding: 4px;
-    margin: 6px;
+    margin-top: 123px;
 }
 
 .footer-pets{
@@ -112,7 +76,7 @@ p{
 /* footer */
 .p-footer{
     padding: 0;
-    font-size: 1.2vw;
+    font-size: 0.8vw;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -132,19 +96,12 @@ footer{
         width: 10vw;
         margin-top: 150px;
     }
-    .logo {
-        width: 20rem;
-    }
-    .login-button{
-        width: 15rem;
-        font-size: 1.3vw;
-    }
     .footer-pets{
         width: 20vw;
         margin-top: 60px;
     }
     .p-footer{
-        font-size: 1.5vw;
+        font-size: 1.4vw;
     }
 }
 
@@ -156,47 +113,32 @@ footer{
         width: 4.5rem;
         margin-top: 200px;
     }
-    .welcome-guest{
-        font-size: 4vw;
-    }
-    .logo {
-        width: 15rem;
-    }
-    .login-button{
-        width: 15rem;
-        font-size: 2vw;
+    .section-app{
+        padding: 5rem;
     }
     .footer-pets{
         width: 27vw;
         margin-top: 60px;
     }
     .p-footer{
-        font-size: 1.8vw;
+        font-size: 1.5vw;
     }
 }
 
 @media(max-width: 500px) {
     .header-guest-left{
-        width: 15rem;
+        width: 17rem;
+    }
+    .logo-app{
+        max-width: 40%;
     }
     .header-guest-right, .copy-image-right {
         width: 3.5rem;
         margin-top: 250px;
     }
-    .welcome-guest{
-        font-size: 6vw;
-    }
-    .phrase-guest {
-        visibility: hidden;
-    }
-    .phrase-guest::before {
-        content: "Que tal buscar seu novo melhor amigo hoje? Vem com a gente!";
-        display: block;
-        visibility: visible;
-    }
-    .login-button{
-        width: 13rem;
-        font-size: 3vw;
+    .section-app{
+        padding: 3.5rem;
+        margin-top: 40px;
     }
     .footer-pets{
         width: 45vw;
@@ -205,6 +147,6 @@ footer{
     .p-footer{
         display: flex;
         flex-wrap: wrap;
-        font-size: 2.8vw;
+        font-size: 2.2vw;
     }
 }
