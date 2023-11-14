@@ -34,7 +34,7 @@ header{
     display: flex;
     text-align: center;
     flex-direction: column;
-    margin-top: 10rem;
+    margin-top: 6rem;
     color: white;
     gap: 2rem;
 }
@@ -53,6 +53,11 @@ header{
     border-radius: 7px;
     color: white;
     width: 17rem;
+}
+
+.pets-guest{
+    text-align: center;
+    margin-top: 1rem;
 }
 
 /* responsividade */

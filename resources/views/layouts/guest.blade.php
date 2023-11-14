@@ -28,6 +28,9 @@
                 {{ $slot }}
             </div>
         </main>
+        <div class="pets-guest">
+            <img src="{{asset('images/pets.svg')}}" alt="pets guest">
+        </div>
         {{-- <footer>
             <p>
                 2023 - Desenvolvido através do Challenger Alura por 
