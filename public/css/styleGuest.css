@@ -12,6 +12,7 @@
 .body-guest{
     background-color: #3772FF;
     font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 
 header{
@@ -41,6 +42,19 @@ header{
 .p-login, h2{
     margin-bottom: 1rem;
 }
+
+.login-button{
+    display: inline-block;
+    background-color: #FC7071;
+    font-weight: 600;
+    text-align: center;
+    margin: 0.3rem;
+    box-shadow: 2px 2px 4px #00000040;
+    border-radius: 7px;
+    color: white;
+    width: 17rem;
+}
+
 /* responsividade */
 @media(max-width: 1200px) {
     .header-guest-left{

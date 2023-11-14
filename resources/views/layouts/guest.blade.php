@@ -24,7 +24,7 @@
                 <p class="phrase-guest">Adotar pode mudar uma vida. Que tal buscar
                     seu<br> novo melhor amigo hoje? Vem com a gente!</p>
             </article>
-            <div class="login">
+            <div>
                 {{ $slot }}
             </div>
         </main>
