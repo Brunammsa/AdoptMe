@@ -9,7 +9,10 @@
     text-decoration: none;
 }
 
-.body-guest{
+body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     background-color: #3772FF;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -20,23 +23,31 @@ header{
     left: 0px;
     top: 0px;
     z-index: -1;
-    height: 2rem;
+}
+.image-header{
+    width: 90%;
 }
 
 .imagem-body-direita{
     position: absolute;
+    margin-top: 10rem;
     right: 0px;
     z-index: -1;
-    height: 36rem;
+    height: 70%;
 }
 
-.main-guest{
+main{
     display: flex;
     text-align: center;
     flex-direction: column;
     margin-top: 6rem;
     color: white;
     gap: 2rem;
+}
+
+.phrase-guest{
+    margin-left: 23rem;
+    margin-right: 23rem;
 }
 
 .p-login, h2{
@@ -58,92 +69,91 @@ header{
 .pets-guest{
     text-align: center;
     margin-top: 1rem;
+    margin-bottom: -2rem;
+}
+
+footer{
+    position: relative;
+    color: white;
+    background-color: #36D6AD;
+    padding: 1rem;
+    text-align: center;
 }
 
 /* responsividade */
 @media(max-width: 1200px) {
-    .header-guest-left{
-        width: 40vw;
+    .image-header{
+        width: 70%;
     }
-    .header-guest-right, .copy-image-right {
-        width: 10vw;
-        margin-top: 150px;
+    .imagem-body-direita{
+        height: 50%;
+        margin-top: 7rem;
     }
-    .logo {
-        width: 20rem;
+    .logo{
+        width: 30%;
     }
-    .login-button{
-        width: 15rem;
-        font-size: 1.3vw;
+    .phrase-guest{
+        margin-left: 15rem;
+        margin-right: 15rem;
     }
-    .footer-pets{
-        width: 20vw;
-        margin-top: 60px;
+    main{
+        gap: 0px;
     }
-    .p-footer{
-        font-size: 1.4vw;
+    .image-pets-footer{
+        width: 20%;
     }
 }
 
-@media(max-width: 768px) {
-    .header-guest-left{
-        width: 18.5rem;
+@media(max-width: 770px) {
+    .image-header{
+        width: 60%;
     }
-    .header-guest-right, .copy-image-right {
-        width: 4.5rem;
-        margin-top: 200px;
+    .imagem-body-direita{
+        height: 40%;
     }
-    .welcome-guest{
-        font-size: 4vw;
+    .logo{
+        width: 30%;
     }
-    .logo {
-        width: 15rem;
+    main{
+        gap: 0px;
+    }
+    .image-pets-footer{
+        width: 30%;
+    }
+    .article-guest, p{
+        font-size: small;
+    }
+    .phrase-guest{
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+    .p-login{
+        margin-top: 1rem;
+        font-size:smaller;
     }
     .login-button{
-        width: 15rem;
-        font-size: 2vw;
+        width: 10rem;
     }
-    .footer-pets{
-        width: 27vw;
-        margin-top: 60px;
-    }
-    .p-footer{
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 2.2vw;
+    .login-button{
+        font-size: small;
     }
 }
 
 @media(max-width: 500px) {
-    .header-guest-left{
-        width: 15rem;
+    .image-header{
+        width: 50%;
     }
-    .header-guest-right, .copy-image-right {
-        width: 3.5rem;
-        margin-top: 250px;
+    .imagem-body-direita{
+        height: 30%;
     }
-    .welcome-guest{
-        font-size: 6vw;
+    .logo{
+        width: 45%;
     }
-    .phrase-guest {
-        visibility: hidden;
+    .image-pets-footer{
+        width: 30%;
     }
-    .phrase-guest::before {
-        content: "Que tal buscar seu novo melhor amigo hoje? Vem com a gente!";
-        display: block;
-        visibility: visible;
-    }
-    .login-button{
-        width: 13rem;
-        font-size: 3vw;
-    }
-    .footer-pets{
-        width: 45vw;
-        margin-top: 30px;
-    }
-    .p-footer{
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 2.8vw;
+    .phrase-guest{
+        margin-left: 3rem;
+        margin-right: 3rem;
     }
 }

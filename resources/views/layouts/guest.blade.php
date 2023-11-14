@@ -10,32 +10,43 @@
         <link href="{{ asset('css/styleGuest.css') }}" rel="stylesheet">
     
     </head>
-    <body class="body-guest">
+    <body>
         <header>
-            <img src="{{asset('images/header-bg.svg')}}" alt="imagem esquerda">
+            <img src="{{asset('images/header-bg.svg')}}" alt="imagem esquerda" class="image-header">
         </header>
         <img src="{{asset('images/body-bg.svg')}}" alt="imagem direita" class="imagem-body-direita">
-        <main class="main-guest">
+        <main>
             <picture>
                 <img src="{{asset('images/Logo.png')}}" alt="logo" class="logo">
             </picture>
             <article class="article-guest">
                 <h2>Boas-vindas!</h2>
-                <p class="phrase-guest">Adotar pode mudar uma vida. Que tal buscar
-                    seu<br> novo melhor amigo hoje? Vem com a gente!</p>
+                <p id="phrase-guest" class="phrase-guest"></p>
             </article>
             <div>
                 {{ $slot }}
             </div>
         </main>
         <div class="pets-guest">
-            <img src="{{asset('images/pets.svg')}}" alt="pets guest">
+            <img src="{{asset('images/pets.svg')}}" alt="pets guest" class="image-pets-footer">
         </div>
-        {{-- <footer>
+        <footer>
             <p>
                 2023 - Desenvolvido através do Challenger Alura por 
                 <a href="https://github.com/Brunammsa" target='_blank' rel="external">BMMSA</a> - sem fins lucrativos.
             </p>
-        </footer> --}}
+        </footer>
     </body>
+    <script>
+        function ajusteDeConteudo(){
+            let tagP = document.getElementById("phrase-guest");
+            if (window.innerWidth <= 500){
+                tagP.innerHTML = "Que tal mudar sua vida\n adotando seu novo melhor\n amigo? Vem com a gente!";
+            } else {
+                tagP.innerHTML = "Adotar pode mudar uma vida.\nQue tal buscar seu novo melhor amigo hoje?\nVem com a gente!";
+            }
+        }
+        window.onload = ajusteDeConteudo;
+        window.onresize = ajusteDeConteudo;
+    </script>
 </html>
