@@ -11,6 +11,7 @@
 
 .body-guest{
     background-color: #3772FF;
+    font-family: 'Poppins', sans-serif;
 }
 
 header{
@@ -21,13 +22,6 @@ header{
     height: 2rem;
 }
 
-.section-guest{
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    margin-top: 7rem;
-}
-
 .imagem-body-direita{
     position: absolute;
     right: 0px;
@@ -35,6 +29,18 @@ header{
     height: 36rem;
 }
 
+.main-guest{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 10rem;
+    color: white;
+    gap: 2rem;
+}
+
+.p-login, h2{
+    margin-bottom: 1rem;
+}
 /* responsividade */
 @media(max-width: 1200px) {
     .header-guest-left{

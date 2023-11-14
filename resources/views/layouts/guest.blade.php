@@ -12,25 +12,27 @@
     </head>
     <body class="body-guest">
         <header>
-            <img src="{{asset('images/header-bg.svg')}}" alt="imagem esquerda" class="header-image">
+            <img src="{{asset('images/header-bg.svg')}}" alt="imagem esquerda">
         </header>
         <img src="{{asset('images/body-bg.svg')}}" alt="imagem direita" class="imagem-body-direita">
-
         <main class="main-guest">
-            <section class="section-guest">
-                <picture>
-                    <img src="{{asset('images/Logo.png')}}" alt="logo" class="logo">
-                </picture>
-                <article>
-                    <h2>Boas-vindas!</h2>
-                    <p class="phrase-guest">Adotar pode mudar uma vida. Que tal buscar
-                        seu<br> novo melhor amigo hoje? Vem com a gente!</p>
-                </article>
-                <div class="login">
-                    {{ $slot }}
-                </div>
-            </section>
-            
+            <picture>
+                <img src="{{asset('images/Logo.png')}}" alt="logo" class="logo">
+            </picture>
+            <article class="article-guest">
+                <h2>Boas-vindas!</h2>
+                <p class="phrase-guest">Adotar pode mudar uma vida. Que tal buscar
+                    seu<br> novo melhor amigo hoje? Vem com a gente!</p>
+            </article>
+            <div class="login">
+                {{ $slot }}
+            </div>
         </main>
+        {{-- <footer>
+            <p>
+                2023 - Desenvolvido através do Challenger Alura por 
+                <a href="https://github.com/Brunammsa" target='_blank' rel="external">BMMSA</a> - sem fins lucrativos.
+            </p>
+        </footer> --}}
     </body>
 </html>
