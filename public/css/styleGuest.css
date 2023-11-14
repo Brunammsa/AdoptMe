@@ -12,10 +12,10 @@
 body{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     background-color: #3772FF;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    height: 100vh;
 }
 
 header{
@@ -33,7 +33,7 @@ header{
     margin-top: 10rem;
     right: 0px;
     z-index: -1;
-    height: 70%;
+    height: 60%;
 }
 
 main{
@@ -45,13 +45,12 @@ main{
     gap: 2rem;
 }
 
-.phrase-guest{
-    margin-left: 23rem;
-    margin-right: 23rem;
-}
-
 .p-login, h2{
     margin-bottom: 1rem;
+}
+
+#phrase-guest-short{
+    display: none;
 }
 
 .login-button{
@@ -68,16 +67,20 @@ main{
 
 .pets-guest{
     text-align: center;
-    margin-top: 1rem;
-    margin-bottom: -2rem;
+    margin-top: 1.5rem;
+}
+.image-pets-footer{
+    height: 70%;
 }
 
 footer{
-    position: relative;
+    position: absolute;
     color: white;
+    bottom: 0;
     background-color: #36D6AD;
     padding: 1rem;
     text-align: center;
+    width: 100%;
 }
 
 /* responsividade */
@@ -90,6 +93,7 @@ footer{
         margin-top: 7rem;
     }
     .logo{
+        margin-top: 6rem;
         width: 30%;
     }
     .phrase-guest{
@@ -98,6 +102,9 @@ footer{
     }
     main{
         gap: 0px;
+    }
+    .p-login{
+        margin-top: 2rem;
     }
     .image-pets-footer{
         width: 20%;
@@ -128,7 +135,7 @@ footer{
         margin-right: 10rem;
     }
     .p-login{
-        margin-top: 1rem;
+        margin-top: 2rem;
         font-size:smaller;
     }
     .login-button{
@@ -150,10 +157,17 @@ footer{
         width: 45%;
     }
     .image-pets-footer{
-        width: 30%;
+        width: 55%;
     }
     .phrase-guest{
         margin-left: 3rem;
         margin-right: 3rem;
     }
+    #phrase-guest-long{
+        display: none;
+    }
+    #phrase-guest-short{
+        display: block;
+    }
+
 }
