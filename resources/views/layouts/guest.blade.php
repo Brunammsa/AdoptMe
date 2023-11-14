@@ -11,32 +11,35 @@
     
     </head>
     <body>
-        <header>
-            <img src="{{asset('images/header-bg.svg')}}" alt="imagem esquerda" class="image-header">
-        </header>
-        <img src="{{asset('images/body-bg.svg')}}" alt="imagem direita" class="imagem-body-direita">
-        <main>
-            <picture>
-                <img src="{{asset('images/Logo.png')}}" alt="logo" class="logo">
+        <div class="container">
+            <header>
+                <img src="{{asset('images/header-bg.svg')}}" alt="imagem esquerda" class="image-header">
+            </header>
+            <img src="{{asset('images/body-bg.svg')}}" alt="imagem direita" class="imagem-body-direita">
+            <main>
+                <picture>
+                    <img src="{{asset('images/Logo.png')}}" alt="logo" class="logo">
+                </picture>
+                <article class="article-guest">
+                    <h2>Boas-vindas!</h2>
+                    <p id="phrase-guest-long" class="phrase-guest">Adotar pode mudar uma vida.<br>Que tal buscar seu novo melhor amigo hoje?<br>Vem com a gente!</p>
+                    <p id="phrase-guest-short" class="phrase-guest">Que tal mudar sua vida adotando seu novo<br> melhor amigo? Vem com a gente!</p>
+                </article>
+                <div>
+                    {{ $slot }}
+                </div>
+            </main>
+            <picture class="pets-guest">
+                <img src="{{asset('images/pets.svg')}}" alt="pets guest" class="image-pets-footer">
             </picture>
-            <article class="article-guest">
-                <h2>Boas-vindas!</h2>
-                <p id="phrase-guest-long" class="phrase-guest">Adotar pode mudar uma vida.<br>Que tal buscar seu novo melhor amigo hoje?<br>Vem com a gente!</p>
-                <p id="phrase-guest-short" class="phrase-guest">Que tal mudar sua vida adotando seu novo<br> melhor amigo? Vem com a gente!</p>
-            </article>
-            <div>
-                {{ $slot }}
-            </div>
-        </main>
-        <picture class="pets-guest">
-            <img src="{{asset('images/pets.svg')}}" alt="pets guest" class="image-pets-footer">
-        </picture>
-        <footer>
-            <p>
-                2023 - Desenvolvido através do Challenger Alura por 
-                <a href="https://github.com/Brunammsa" target='_blank' rel="external">BMMSA</a> - sem fins lucrativos.
-            </p>
-        </footer>
+            <footer>
+                <p>
+                    2023 - Desenvolvido através do Challenger Alura por 
+                    <a href="https://github.com/Brunammsa" target='_blank' rel="external">BMMSA</a> - sem fins lucrativos.
+                </p>
+            </footer>
+        </div>
+        
     </body>
     {{-- <script>
         function ajusteDeConteudo(){

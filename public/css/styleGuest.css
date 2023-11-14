@@ -10,12 +10,25 @@
 }
 
 body{
-    display: flex;
-    flex-direction: column;
     background-color: #3772FF;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
+}
+
+main{
+    flex: 1;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 6rem;
+    color: white;
+    gap: 2rem;
 }
 
 header{
@@ -34,15 +47,6 @@ header{
     right: 0px;
     z-index: -1;
     height: 60%;
-}
-
-main{
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    margin-top: 6rem;
-    color: white;
-    gap: 2rem;
 }
 
 .p-login, h2{
