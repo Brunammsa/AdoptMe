@@ -9,92 +9,30 @@
     text-decoration: none;
 }
 
-/* rolagem suave de uma pag para outra */
-html {
-    scroll-behavior: smooth; 
-}
-.body-guest {
+.body-guest{
     background-color: #3772FF;
 }
 
-.main-guest {
-    display: flex;
-    justify-content: space-between;
-}
-
-.header-guest-left {
+header{
     position: absolute;
-    background-position: left;
-    background-size: 100%;
+    left: 0px;
+    top: 0px;
     z-index: -1;
+    height: 2rem;
 }
 
-.header-guest-right {
-    background-position: right;
-    background-size: 100%;
-    margin-top: 130px;
-    z-index: -1;
-}
-
-.copy-image-right{
-    visibility: hidden;
-}
-
-.section-guest {
+.section-guest{
     display: flex;
+    text-align: center;
     flex-direction: column;
-    text-align: center;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    height: auto;
+    margin-top: 7rem;
 }
 
-.logo{
-    margin-top: 110px;
-}
-
-.welcome-guest{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-weight: 300;
-}
-
-/* login area */
-.login{
-    margin-top: 20px;
-}
-.login-button {
-    display: inline-block;
-    width: 20rem;
-    background-color: #FC7071;
-    font-weight: 600;
-    font-size: 1vw;
-    text-align: center;
-    box-shadow: 2px 2px 4px #00000040;
-    border-radius: 7px;
-    color: white;
-    padding: 4px;
-    margin: 6px;
-}
-
-.footer-pets{
-    width: 20vw;
-    margin-top: 60px;
+.imagem-body-direita{
+    position: absolute;
+    right: 0px;
     z-index: -1;
-}
-
-/* footer */
-.p-footer{
-    padding: 0;
-    font-size: 0.8vw;
-    font-family: 'Poppins', sans-serif;
-}
-
-footer{
-    text-align: center;
-    background-color: #36D6AD;
-    color: white;
-    padding: 15px;
+    height: 36rem;
 }
 
 /* responsividade */
