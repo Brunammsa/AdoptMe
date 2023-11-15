@@ -17,18 +17,11 @@ html {
     background-color: white;
 }
 
-.header-guest-left {
-    position: absolute;
-    background-position: left;
-    background-size: 100%;
+.image-app-right{
+    margin-top: 1.3rem;
+    right: 0px;
     z-index: -1;
-}
-
-.header-guest-right {
-    background-position: right;
-    background-size: 100%;
-    margin-top: 130px;
-    z-index: -1;
+    height: 60%;
 }
 
 .main-app{
@@ -65,12 +58,6 @@ p{
 .perfil-app{
     display: flex;
     margin-top: 123px;
-}
-
-.footer-pets{
-    width: 20vw;
-    margin-top: 60px;
-    z-index: -1;
 }
 
 /* footer */

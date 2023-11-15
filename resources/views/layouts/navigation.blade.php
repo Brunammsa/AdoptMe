@@ -1,7 +1,8 @@
 <nav x-data="{ open: false }">
     <header>
-        <img src="{{ asset('images/header-bg.svg') }}" alt="imagem esquerda" class="header-guest-left">
+        <img src="{{ asset('images/header-bg.svg') }}" alt="imagem esquerda" class="header-app-left">
     </header>
+    <img src="{{asset('images/body-bg.svg')}}" alt="imagem direita" class="image-app-direita">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
