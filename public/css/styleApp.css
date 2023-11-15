@@ -17,6 +17,12 @@ body {
     background-color: white;
 }
 
+.container-app{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 header{
     position: absolute;
     left: 0px;
@@ -38,6 +44,7 @@ header{
 
 .main-app{
     font-family: 'Poppins', sans-serif;
+    flex: 1;
 }
 
 .logo-app{

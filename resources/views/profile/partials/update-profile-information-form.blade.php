@@ -1,10 +1,7 @@
 <section>
-    <header>
-        <h2 class="text-lg font-medium text-gray-900">
-            {{ __('Informações de perfil') }}
-        </h2>
-    </header>
-
+    <h2 class="text-lg font-medium text-gray-900">
+        {{ __('Informações de perfil') }}
+    </h2>
     <form id="send-verification" method="post" action="{{ route('verification.send') }}">
         @csrf
     </form>

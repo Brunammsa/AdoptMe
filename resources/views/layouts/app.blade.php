@@ -13,14 +13,16 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body>
-        @include('layouts.navigation')
+        <div class="container-app">
+            @include('layouts.navigation')
 
-        <!-- Page Content -->
-        <main class="main-app">
-            {{ $slot }}
-        </main>
-        <footer>
-            <p class="p-footer">2023 - Desenvolvido através do Challenger Alura por <a href="https://github.com/Brunammsa" target='_blank' rel="external">BMMSA</a> para fins gratuitos</p>
-        </footer>
+            <!-- Page Content -->
+            <main class="main-app">
+                {{ $slot }}
+            </main>
+            <footer>
+                <p class="p-footer">2023 - Desenvolvido através do Challenger Alura por <a href="https://github.com/Brunammsa" target='_blank' rel="external">BMMSA</a> para fins gratuitos</p>
+            </footer>
+        </div>
     </body>
 </html>

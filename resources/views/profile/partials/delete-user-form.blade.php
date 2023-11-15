@@ -1,13 +1,11 @@
 <section class="space-y-6">
-    <header>
-        <h2 class="text-lg font-medium text-gray-900">
-            {{ __('Deletar conta') }}
-        </h2>
+    <h2 class="text-lg font-medium text-gray-900">
+        {{ __('Deletar conta') }}
+    </h2>
 
-        <p class="mt-1 text-sm text-gray-600">
-            {{ __('Uma vez deletada, todas as suas informações serão apagadas permanentemente!') }}
-        </p>
-    </header>
+    <p class="mt-1 text-sm text-gray-600">
+        {{ __('Uma vez deletada, todas as suas informações serão apagadas permanentemente!') }}
+    </p>
 
     <x-danger-button
         x-data=""
