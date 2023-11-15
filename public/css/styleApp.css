@@ -13,15 +13,23 @@
 html {
     scroll-behavior: smooth; 
 }
-.body-app {
+body {
     background-color: white;
 }
 
-.image-app-right{
-    margin-top: 1.3rem;
-    right: 0px;
+header{
+    position: absolute;
+    left: 0px;
+    top: 0px;
     z-index: -1;
-    height: 60%;
+}
+
+.icon-add {
+    width: 2.3rem;
+}
+
+.logo{
+    width: 100%;
 }
 
 .main-app{
@@ -40,12 +48,6 @@ html {
     max-width: 80rem;
     margin: auto;
     padding: 8rem;
-}
-
-.pets{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 3rem;
 }
 
 p{
@@ -92,21 +94,17 @@ footer{
     }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 637px) {
     .header-guest-left{
         width: 18.5rem;
     }
-    .header-guest-right, .copy-image-right {
-        width: 4.5rem;
-        margin-top: 200px;
+    .logo{
+        width: 100%;
     }
     .section-app{
         padding: 5rem;
     }
-    .footer-pets{
-        width: 27vw;
-        margin-top: 60px;
-    }
+
     .p-footer{
         font-size: 1.5vw;
     }

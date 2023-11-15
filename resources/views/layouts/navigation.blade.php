@@ -2,7 +2,6 @@
     <header>
         <img src="{{ asset('images/header-bg.svg') }}" alt="imagem esquerda" class="header-app-left">
     </header>
-    <img src="{{asset('images/body-bg.svg')}}" alt="imagem direita" class="image-app-direita">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -17,9 +16,12 @@
                 </div>
                 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="hidden space-x-3 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')">
-                        <img src="{{ asset('images/Casa.png') }}" alt="">
+                        <img src="{{ asset('images/Casa.png') }}" alt="icon home">
+                    </x-nav-link>
+                    <x-nav-link :href="route('dashboard')">
+                        <img src="{{ asset('images/add.png') }}" alt="icon add" class="icon-add">
                     </x-nav-link>
                 </div>
             </div>
@@ -103,4 +105,5 @@
             </div>
         </div>
     </div>
+    
 </nav>
