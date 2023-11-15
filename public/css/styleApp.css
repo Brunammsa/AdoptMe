@@ -28,8 +28,12 @@ header{
     width: 2.3rem;
 }
 
-.logo{
-    width: 100%;
+.phrase-app{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #3772FF;
+    font-weight: 600;
 }
 
 .main-app{
@@ -37,7 +41,7 @@ header{
 }
 
 .logo-app{
-    max-width: 50%;
+    max-width: 30%;
 }
 
 .usuario-app{
@@ -47,14 +51,7 @@ header{
 .section-app{
     max-width: 80rem;
     margin: auto;
-    padding: 8rem;
-}
-
-p{
-    margin-top: 50px;
-    text-align: center;
-    color: #3772FF;
-    font-weight: 600;
+    padding: 7rem;
 }
 
 .perfil-app{
