@@ -20,7 +20,7 @@
                     <x-nav-link :href="route('dashboard')">
                         <img src="{{ asset('images/Casa.png') }}" alt="icon home">
                     </x-nav-link>
-                    <x-nav-link :href="route('dashboard')">
+                    <x-nav-link :href="route('meusPets.index')">
                         <img src="{{ asset('images/add.png') }}" alt="icon add" class="icon-add">
                     </x-nav-link>
                 </div>
