@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\PetsController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Pets;
 use Illuminate\Support\Facades\Route;
 
 /*

@@ -11,6 +11,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\LoginSocialiteController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PetsController;
 
 Route::middleware('guest')->group(function () {
     Route::get('/login/{driver}/redirect', [LoginSocialiteController::class, 'validator'])
@@ -39,6 +40,13 @@ Route::middleware('guest')->group(function () {
 
     Route::post('reset-password', [NewPasswordController::class, 'store'])
                 ->name('password.store');
+});
+
+Route::middleware('auth')->group(function () {
+    Route::get('/meusPets', [PetsController::class, 'index'])->name('meusPets.index');
+    Route::get('/meusPets/criar', [PetsController::class, 'create'])->name('meusPets.create');
+    // Route::patch('/addPet', [Pets::class, 'update'])->name('pet.update');
+    // Route::delete('/addPet', [Pets::class, 'destroy'])->name('pet.destroy');
 });
 
 Route::middleware('auth')->group(function () {
