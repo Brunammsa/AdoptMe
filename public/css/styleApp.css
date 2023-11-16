@@ -69,7 +69,7 @@ header{
 /* footer */
 .p-footer{
     padding: 0;
-    font-size: 0.8vw;
+    font-size: 1vw;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -92,19 +92,23 @@ footer{
 .cabecalho{
     display: flex;
     justify-content: space-between;
-    background-color: 28977b;
+    align-items: center;
     font-weight: 500;
 }
 
-.link-add-pet{
-    color:black;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-}
-
-ul {
-    list-style-type: none;
-    text-align: start;
+.link-add-pet {
+  display: inline-flex;
+  background-color: #3ebb9a;
+  align-items: center;
+  padding: 4px 15px;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* pag adicionar pet */
@@ -133,6 +137,7 @@ input{
 .form-create{
     margin-top: -4rem;
 }
+
 
 /* responsividade */
 @media(max-width: 1200px) {
