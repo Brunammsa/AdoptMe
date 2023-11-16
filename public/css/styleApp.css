@@ -80,6 +80,60 @@ footer{
     padding: 15px;
 }
 
+/* pag meus pets */
+.section-meusPets{
+    max-width: 42rem;
+    margin: 10rem auto auto auto;
+    padding: 2.5rem;
+    background-color:white;
+    border-radius: .7rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    background-color: 28977b;
+    font-weight: 500;
+}
+
+.link-add-pet{
+    color:black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+ul {
+    list-style-type: none;
+    text-align: start;
+}
+
+/* pag adicionar pet */
+.cabecalho-novoPet{
+    display: flex;
+    justify-content: space-between;
+}
+
+.patas{
+    width: 10rem;
+}
+
+.section-create{
+    max-width: 35rem;
+    margin: 5rem auto 1.5rem auto;
+    padding: 0 0 2.5rem 2.5rem;
+    background-color:white;
+    border-radius: .7rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input{
+    max-width: 30rem;
+    border-radius: .7rem;
+}
+.form-create{
+    margin-top: -4rem;
+}
+
 /* responsividade */
 @media(max-width: 1200px) {
     .header-guest-left{
