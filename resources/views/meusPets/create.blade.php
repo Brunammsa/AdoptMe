@@ -5,7 +5,7 @@
             <h1 class=" mb-4 mt-20">Cadastro do pet:</h1>
             <img src="{{ asset('images/Patas.png') }}" alt="imagem patas" class="patas">
         </div>
-        <form action="/meusPets/salvar" class="form-create" method="POST">
+        <form action="{{route('meusPets.store')}}" class="form-create" method="POST">
             @csrf
             <div>
                 <x-input-label for="name" :value="__('Name')" />
