@@ -118,6 +118,7 @@ footer{
 .icones-att-del{
     display: flex;
     justify-content: baseline;
+    align-items:baseline;
     gap: 1rem;
 }
 /* pag adicionar pet */
@@ -146,7 +147,11 @@ input{
 .form-create{
     margin-top: -4rem;
 }
-
+.botoes-create{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 
 /* responsividade */
 @media(max-width: 1200px) {
