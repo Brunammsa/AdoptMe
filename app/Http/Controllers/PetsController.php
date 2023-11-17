@@ -42,7 +42,7 @@ class PetsController extends Controller
 
     public function edit(Pets $pet): View
     {
-        return view('meusPets.index')->with('pet', $pet);
+        return view('meusPets.edit')->with('pet', $pet);
     }
 
     public function updatePet(Pets $pets, Request $request)
