@@ -40,19 +40,28 @@ class PetsController extends Controller
         return to_route('meusPets.index');
     }
 
-    public function editPet()
+    public function edit(Pets $pet): View
     {
-
+        return view('meusPets.index')->with('pet', $pet);
     }
 
-    public function updatePet()
-    {
+    public function updatePet(Pets $pets, Request $request)
+    {   
+        $pets->name = ucfirst($request->name);
+        $pets->age = $request->age;
+        $pets->size = $request->size;
+        $pets->description = ucfirst($request->description);
 
+        $pets->save();
+
+        return to_route('meusPets.index');
     }
 
-    public function deletePet()
+    public function destroy(Pets $id)
     {
+        $id->delete();
 
+        return to_route('meusPets.index');
     }
 
     public function allPets(): View
