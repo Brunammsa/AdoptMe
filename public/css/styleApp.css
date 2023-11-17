@@ -110,7 +110,16 @@ footer{
   letter-spacing: 0.05em;
   transition: background-color 0.3s, color 0.3s;
 }
-
+.container-pets{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.3rem;
+}
+.icones-att-del{
+    display: flex;
+    justify-content: baseline;
+    gap: 1rem;
+}
 /* pag adicionar pet */
 .cabecalho-novoPet{
     display: flex;
