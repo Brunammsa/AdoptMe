@@ -7,10 +7,16 @@
         <div class="pets">
             <ul>
                 @if (empty($pets))
-                    <p>Você não possue pets cadastrados!</p>
+                    <p>Você não possui pets cadastrados!</p>
                 @else
                     @foreach ($pets as $pet)
-                        <li class=" mt-6">{{$pet->name}}</li>
+                        <li class="container-pets">
+                            {{$pet->name}}
+                            <div class="icones-att-del">
+                                <img src="{{asset('images/edit.png')}}" alt="">
+                                <img src="{{asset('images/delete.png')}}" alt="">
+                            </div>
+                        </li>
                         <hr>
                     @endforeach
                 @endif
