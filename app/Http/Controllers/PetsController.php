@@ -29,20 +29,15 @@ class PetsController extends Controller
     {
         $userId = User::where('name', Auth::user()->name)->first()->id;
 
-        $name = $request->input('name');
-        $age = $request->input('age');
-        $size = $request->input('size');
-        $description = $request->input('description');
-
         Pets::create([
-            'name' => ucfirst($name),
-            'age' => $age,
-            'size' => $size,
-            'description' => ucfirst($description),
+            'name' => ucfirst($request->name),
+            'age' => $request->age,
+            'size' => $request->size,
+            'description' => ucfirst($request->description),
             'users_id' => $userId
         ]);
 
-        redirect('/meusPets');
+        return to_route('meusPets.index');
     }
 
     public function editPet()
@@ -62,7 +57,7 @@ class PetsController extends Controller
 
     public function allPets(): View
     {
-        $pets = Pets::all();
+        $pets = Pets::orderBy('created_at', 'desc')->simplePaginate(4);
     
         return view('dashboard')->with('pets', $pets);
     }
