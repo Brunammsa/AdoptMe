@@ -1,5 +1,4 @@
 <x-app-layout>
-    
     <section class="section-create">
         <div class="cabecalho-novoPet">
             <h1 class=" mb-4 mt-20">Cadastro do pet:</h1>
@@ -7,6 +6,7 @@
         </div>
         <form action="{{route('meusPets.store')}}" class="form-create" method="POST">
             @csrf
+
             <div>
                 <x-input-label for="name" :value="__('Name')" />
                 <x-text-input id="name" class="block mt-1 w-full mb-4" 
@@ -35,10 +35,12 @@
             <div>
                 <x-input-label for="description" :value="__('Descreva seu pet')" />
                 <x-text-input id="description" class="block mt-1 w-full mb-4" 
-                type="text" name="description" 
+                type="text" 
+                name="description" 
                 required autofocus autocomplete="description" 
                 placeholder="ex.: carinhoso(a), companheiro(a)" />
             </div>
+            
             {{-- <div class="mt-4 mb-4">
                 <p class="mt-4 d-block font-medium text-md text-gray-700">Onde o pet está localizado?</p>
                 <select class="form-select rounded me-3 mt-1" name="state" id="state">
@@ -58,28 +60,30 @@
                 type="file" 
                 placeholder="ex.: carinhoso(a), companheiro(a)" />
             </div> --}}
-            <x-primary-button>Cadastrar</x-primary-button>
+            <div class="botoes-create">
+                <x-primary-button>Cadastrar</x-primary-button>
+                <x-nav-link href="{{route('meusPets.index')}}">Voltar</x-nav-link>
+            </div>
         </form>
     </section>
-
-    <script>
-        let stateSelect = document.getElementById('state');
-        let citySelect = document.getElementById('city');
-
-        stateSelect.addEventListener('change', function () {
-            let stateId = stateSelect.value;
-            fetch(`/api/state/${stateId}/city`)
-                .then(response => response.json())
-                .then(data => {
-                    citySelect.innerHTML = '<option selected>Cidade</option>';
-                    data.forEach(city => {
-                        let option = document.createElement('option');
-                        option.value = city.id;
-                        option.innerHTML = city.name;
-                        citySelect.appendChild(option);
-                    });
-                    citySelect.disabled = false;
-                })
-        });
-    </script>
 </x-app-layout>
+<script>
+    let stateSelect = document.getElementById('state');
+    let citySelect = document.getElementById('city');
+
+    stateSelect.addEventListener('change', function () {
+        let stateId = stateSelect.value;
+        fetch(`/api/state/${stateId}/city`)
+            .then(response => response.json())
+            .then(data => {
+                citySelect.innerHTML = '<option selected>Cidade</option>';
+                data.forEach(city => {
+                    let option = document.createElement('option');
+                    option.value = city.id;
+                    option.innerHTML = city.name;
+                    citySelect.appendChild(option);
+                });
+                citySelect.disabled = false;
+            })
+    });
+</script>
