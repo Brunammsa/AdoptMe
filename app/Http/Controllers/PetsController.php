@@ -13,12 +13,7 @@ class PetsController extends Controller
 {
     public function index(): View
     {
-        //$pets = Pets::where('users_id, Auth::user()->id)->get();
-
-        // $user  = Auth::user();
-        // $pets = $user->pets;
-        $pets = [];
-        $pet = new Pets();
+        $pets = Pets::where('users_id', Auth::user()->id)->get();
 
         return view('meusPets.index')->with('pets', $pets);
     }
@@ -37,7 +32,6 @@ class PetsController extends Controller
         $name = $request->input('name');
         $age = $request->input('age');
         $size = $request->input('size');
-        dd($size);
         $description = $request->input('description');
 
         Pets::create([
@@ -66,10 +60,10 @@ class PetsController extends Controller
 
     }
 
-    public function allPets(User $user)
+    public function allPets(): View
     {
-        $pets = $user->pets;
+        $pets = Pets::all();
     
-        return view('meusPets.index')->with('pets', $pets);
+        return view('dashboard')->with('pets', $pets);
     }
 }

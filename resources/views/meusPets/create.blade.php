@@ -15,16 +15,6 @@
                 required autofocus autocomplete="name"
                 placeholder="ex.: floquinho" />
             </div>
-
-            {{-- <div>
-                <x-input-label for="raca" :value="__('Raça')" />
-                <x-text-input id="raca" class="block mt-1 w-full mb-4" 
-                type="text" 
-                name="raca" 
-                required autofocus autocomplete="raca"
-                placeholder="ex.: gato/cachorro" />
-            </div> --}}
-
             <div>
                 <x-input-label for="age" :value="__('Idade')" />
                 <x-text-input id="age" class="block mt-1 w-full mb-4" 
@@ -34,11 +24,12 @@
                 placeholder="ex.: 5 meses/anos" />
             </div>
             <div>
+                <?php $porte = ['Pequeno', 'Médio', 'Grande'] ?>
                 <x-input-label for="size" :value="__('Porte')" />
                 <select class="form-select rounded mb-4" name="size" id="size">
-                    <option value="pequeno">Pequeno</option>
-                    <option value="medio">Médio</option>
-                    <option value="grande">Grande</option>
+                    @foreach ($porte as $p)
+                        <option>{{$p}}</option>
+                    @endforeach
                 </select>
             </div>
             <div>

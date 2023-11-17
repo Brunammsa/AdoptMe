@@ -4,11 +4,9 @@
             <div>
                 <div class="pets">
                     <ul>
-                        <li>pet 1</li>
-                        <li>pet 2</li>
-                        <li>pet 3</li>
-                        <li>pet 4</li>
-                        <li>pet 5</li>
+                        @foreach ($pets as $pet)
+                            <li>{{ $pet }}</li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
