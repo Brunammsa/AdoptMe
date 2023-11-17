@@ -46,8 +46,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/meusPets', [PetsController::class, 'index'])->name('meusPets.index');
     Route::get('/meusPets/criar', [PetsController::class, 'create'])->name('meusPets.create');
     Route::post('/meusPets/salvar', [PetsController::class, 'store'])->name('meusPets.store');
-    // Route::patch('/atualizar', [Pets::class, 'update'])->name('pet.update');
-    // Route::delete('/excluir', [Pets::class, 'destroy'])->name('pet.destroy');
+    Route::get('/meusPets/editar/{id}', [PetsController::class, 'edit'])->name('meusPets.edit');
+    Route::patch('/meusPets/{id}', [PetsController::class, 'update'])->name('meusPets.update');
+    Route::delete('/meusPets/excluir/{id}', [PetsController::class, 'destroy'])->name('meusPets.destroy');
 });
 
 Route::middleware('auth')->group(function () {
