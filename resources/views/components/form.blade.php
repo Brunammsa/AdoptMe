@@ -6,24 +6,30 @@
     
     <div>
         <x-input-label for="name" :value="__('Name')" />
-        <x-text-input id="name" class="block mt-1 w-full mb-4" 
-        type="text" 
-        name="name" 
-        :value="$pets->name ?? ''"
-        required autofocus autocomplete="name"/>
+        <input type="text" 
+            class="input-text rounded-md border-gray-300"
+            id="name"
+            name="name"
+            required autofocus autocomplete="name"
+            @isset($name)
+                value="{{$name}}"
+            @endisset>
     </div>
     <div>
         <x-input-label for="age" :value="__('Idade')" />
-        <x-text-input id="age" class="block mt-1 w-full mb-4" 
-        type="text" 
-        name="age" 
-        :value="$pets->age ?? ''"
-        required autofocus autocomplete="age"/>
+        <input type="text" 
+            class="input-text rounded-md border-gray-300"
+            id="age"
+            name="age"
+            required autofocus autocomplete="age"
+            @isset($age)
+                value="{{$age}}"
+            @endisset>
     </div>
     <div>
         <?php $porte = ['Pequeno', 'Médio', 'Grande'] ?>
         <x-input-label for="size" :value="__('Porte')" />
-        <select class="form-select rounded mb-4" name="size" id="size">
+        <select class="form-select rounded-md mb-4" name="size" id="size">
             @foreach ($porte as $p)
                 <option>{{$p}}</option>
             @endforeach
@@ -31,11 +37,14 @@
     </div>
     <div>
         <x-input-label for="description" :value="__('Descreva seu pet')" />
-        <x-text-input id="description" class="block mt-1 w-full mb-4" 
-        type="text" 
-        name="description" 
-        :value="$pets->description ?? ''"
-        required autofocus autocomplete="description" />
+        <input type="text" 
+            class="input-text rounded-md border-gray-300"
+            id="description"
+            name="description"
+            required autofocus autocomplete="description"
+            @isset($description)
+                value="{{$description}}"
+            @endisset>
     </div>
     
     {{-- <div class="mt-4 mb-4">
