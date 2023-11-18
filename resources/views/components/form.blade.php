@@ -58,7 +58,7 @@
         placeholder="ex.: carinhoso(a), companheiro(a)" />
     </div> --}}
     <div class="botoes-create">
-        <x-primary-button>Atualizar</x-primary-button>
+        <x-primary-button>Salvar</x-primary-button>
         <x-nav-link href="{{route('meusPets.index')}}">Voltar</x-nav-link>
     </div>
 </form>
