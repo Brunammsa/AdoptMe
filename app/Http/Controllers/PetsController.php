@@ -45,14 +45,16 @@ class PetsController extends Controller
         return view('meusPets.edit')->with('pets', $pets);
     }
 
-    public function update(Pets $pets, Request $request)
+    public function update($id, Request $request)
     {   
+        $pets = Pets::find($id);
+
         $pets->name = ucfirst($request->name);
         $pets->age = $request->age;
         $pets->size = $request->size;
         $pets->description = ucfirst($request->description);
 
-        $pets->save();
+        $pets->update();
 
         return to_route('meusPets.index');
     }
