@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Laravel\Socialite\Facades\Socialite;
 use App\Models\User;
 use Illuminate\Support\Facades\Validator;
-
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class LoginSocialiteController extends Controller
 {
@@ -16,13 +17,9 @@ class LoginSocialiteController extends Controller
         return Socialite::driver($driver)->redirect();
     }
 
-    public function callback($driver)
+    public function callback($driver, Request $request)
     {
         $socialUser = Socialite::driver($driver)->user();
-
-        $passwordCrypto = random_bytes(10);
-        $randomPassword = base64_encode($passwordCrypto);
-        $passwordHashed = password_hash($randomPassword, PASSWORD_BCRYPT);
     
         $user = User::updateOrCreate([
             'email' => $socialUser->email,
@@ -30,7 +27,7 @@ class LoginSocialiteController extends Controller
             'name' => $socialUser->name,
             'provider' => $driver,
             'provider_id' => $socialUser->id,
-            'password' => $passwordHashed,
+            'password' => Hash::make($request->password),
         ]);
     
         auth()->login($user);
