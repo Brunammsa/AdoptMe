@@ -5,7 +5,7 @@
     @endisset
     
     <div>
-        <x-input-label for="name" :value="__('Name')" />
+        <x-input-label for="name" :value="__('Nome')" />
         <x-text-input id="name" class="block mt-1 w-full mb-4" 
         type="text" 
         name="name" 
@@ -30,20 +30,11 @@
         required autofocus autocomplete="description"/>
     </div>
     
-    {{-- <div class="mt-4 mb-4">
-        <p class="mt-4 d-block font-medium text-md text-gray-700">Onde o pet está localizado?</p>
-        <select class="form-select rounded me-3 mt-1" name="state" id="state">
-            <option selected>Selecione o Estado</option>
-            @foreach ($states as $state)
-                <option value="{{$state->id}}">{{ $state->abbreviation }}</option>
-            @endforeach
-        </select>
-
-        <select class="form-select rounded" name="city" id="city" disabled>
-            <option selected>Cidade</option>
-        </select>
+    <div>
+        <x-input-label for="size" :value="__('Onde está o pet?')" />
+        <x-select-cities class="block mt-1 w-25 mb-4"/>
     </div>
-    <div class="mb-3">
+    {{-- <div class="mb-3">
         <x-input-label for="formFileSm" :value="__('Foto')" />
         <x-text-input id="formFileSm" class="form-control form-control-sm" 
         type="file" 
@@ -54,23 +45,3 @@
         <x-nav-link href="{{route('meusPets.index')}}">Voltar</x-nav-link>
     </div>
 </form>
-<script>
-    let stateSelect = document.getElementById('state');
-    let citySelect = document.getElementById('city');
-
-    stateSelect.addEventListener('change', function () {
-        let stateId = stateSelect.value;
-        fetch(`/api/state/${stateId}/city`)
-            .then(response => response.json())
-            .then(data => {
-                citySelect.innerHTML = '<option selected>Cidade</option>';
-                data.forEach(city => {
-                    let option = document.createElement('option');
-                    option.value = city.id;
-                    option.innerHTML = city.name;
-                    citySelect.appendChild(option);
-                });
-                citySelect.disabled = false;
-            })
-    });
-</script>
