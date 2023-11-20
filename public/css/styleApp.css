@@ -124,6 +124,11 @@ footer{
     gap: 1rem;
 }
 
+.select-estados{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
 /* pag adicionar pet */
 .cabecalho-novoPet{
     display: flex;
