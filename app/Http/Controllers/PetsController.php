@@ -47,7 +47,8 @@ class PetsController extends Controller
     public function edit(Pets $pets)
     {
         $states = States::all();
-
+        $cities = Cities::all();
+        
         return view('meusPets.edit')
                 ->with('pets', $pets)
                 ->with('states', $states)
