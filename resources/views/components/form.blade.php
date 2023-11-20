@@ -6,45 +6,28 @@
     
     <div>
         <x-input-label for="name" :value="__('Name')" />
-        <input type="text" 
-            class="input-text rounded-md border-gray-300"
-            id="name"
-            name="name"
-            required autofocus autocomplete="name"
-            @isset($name)
-                value="{{$name}}"
-            @endisset>
+        <x-text-input id="name" class="block mt-1 w-full mb-4" 
+        type="text" 
+        name="name" 
+        required autofocus autocomplete="name"/>
     </div>
     <div>
         <x-input-label for="age" :value="__('Idade')" />
-        <input type="text" 
-            class="input-text rounded-md border-gray-300"
-            id="age"
-            name="age"
-            required autofocus autocomplete="age"
-            @isset($age)
-                value="{{$age}}"
-            @endisset>
+        <x-text-input id="age" class="block mt-1 w-full mb-4" 
+        type="text" 
+        name="age" 
+        required autofocus autocomplete="age"/>
     </div>
     <div>
-        <?php $porte = ['Pequeno', 'Médio', 'Grande'] ?>
         <x-input-label for="size" :value="__('Porte')" />
-        <select class="form-select rounded-md mb-4" name="size" id="size">
-            @foreach ($porte as $p)
-                <option>{{$p}}</option>
-            @endforeach
-        </select>
+        <x-input-select class="block mt-1 w-25 mb-4"/>
     </div>
     <div>
         <x-input-label for="description" :value="__('Descreva seu pet')" />
-        <input type="text" 
-            class="input-text rounded-md border-gray-300"
-            id="description"
-            name="description"
-            required autofocus autocomplete="description"
-            @isset($description)
-                value="{{$description}}"
-            @endisset>
+        <x-text-input id="age" class="block mt-1 w-full mb-4" 
+        type="text" 
+        name="description" 
+        required autofocus autocomplete="description"/>
     </div>
     
     {{-- <div class="mt-4 mb-4">
