@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cities;
 use App\Models\Pets;
 use App\Models\States;
 use App\Models\User;
@@ -21,8 +22,11 @@ class PetsController extends Controller
     public function create(): View
     {
         $states = States::all();
+        $cities = Cities::all();
 
-        return view('meusPets.create')->with('states', $states);
+        return view('meusPets.create')
+                ->with('states', $states)
+                ->with('cities', $cities);
     }
 
     public function store(Request $request)
@@ -42,7 +46,13 @@ class PetsController extends Controller
 
     public function edit(Pets $pets)
     {
-        return view('meusPets.edit')->with('pets', $pets);
+        $states = States::all();
+
+        return view('meusPets.edit')
+                ->with('pets', $pets)
+                ->with('states', $states)
+                ->with('cities', $cities);
+
     }
 
     public function update($id, Request $request)
