@@ -2,7 +2,10 @@
     'name' => $pets->name,
     'age' => $pets->age,
     'description' => $pets->description,
-    'id' => $pets->id
+    'id' => $pets->id,
+    'size' => $pets->size,
+    'state' => $states,
+    'cities' => $cities
 ])
 
 <x-app-layout>
@@ -15,6 +18,8 @@
             :name="old('name')"
             :age="old('age')"
             :description="old('description')"
+            :states="$states"
+            :cities="$cities"
             ></x-form>
     </section>
 </x-app-layout>
