@@ -25,7 +25,7 @@
                 {{ __('Se realmente deseja deletar sua conta, digite sua senha abaixo para confirmar.') }}
             </p>
 
-            <div class="mt-6">
+            {{-- <div class="mt-6">
                 <x-input-label for="password" value="{{ __('Password') }}" class="sr-only" />
 
                 <x-text-input
@@ -37,7 +37,7 @@
                 />
 
                 <x-input-error :messages="$errors->userDeletion->get('password')" class="mt-2" />
-            </div>
+            </div> --}}
 
             <div class="mt-6 flex justify-end">
                 <x-secondary-button x-on:click="$dispatch('close')">
