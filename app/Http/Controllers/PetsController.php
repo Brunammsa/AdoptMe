@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PetsFormRequest;
 use App\Models\Cities;
 use App\Models\Pets;
 use App\Models\States;
@@ -9,6 +10,7 @@ use App\Models\User;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class PetsController extends Controller
 {
@@ -29,7 +31,7 @@ class PetsController extends Controller
                 ->with('cities', $cities);
     }
 
-    public function store(Request $request)
+    public function store(PetsFormRequest $request)
     {
         $userId = User::where('name', Auth::user()->name)->first()->id;
 
@@ -56,7 +58,7 @@ class PetsController extends Controller
 
     }
 
-    public function update($id, Request $request)
+    public function update($id, PetsFormRequest $request)
     {   
         $pets = Pets::find($id);
 
