@@ -20,6 +20,7 @@
             :description="old('description')"
             :states="$states"
             :cities="$cities"
+            :update="true"
             ></x-form>
     </section>
 </x-app-layout>
