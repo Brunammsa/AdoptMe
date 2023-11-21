@@ -6,16 +6,21 @@
     
     <div>
         <x-input-label for="name" :value="__('Nome')" />
-        <x-text-input id="name" class="block mt-1 w-full mb-4" 
+        <input type="text"
+        autofocus  
+        id="name" 
         name="name" 
-        required autofocus autocomplete="name"/>
-        <x-input-error :messages="$errors->get('password')" class="mt-2"/>
+        class=" block mt-1 w-full mb-4 border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" 
+        @isset($name) value="{{ $name }}"@endisset>
     </div>
     <div>
         <x-input-label for="age" :value="__('Idade')" />
-        <x-text-input id="age" class="block mt-1 w-full mb-4" 
+        <input type="text"
+        autofocus  
+        id="age" 
         name="age" 
-        required autofocus autocomplete="age"/>
+        class=" block mt-1 w-full mb-4 border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" 
+        @isset($age) value="{{ $age }}"@endisset>
     </div>
     <div>
         <x-input-label for="size" :value="__('Porte')" />
@@ -23,9 +28,12 @@
     </div>
     <div>
         <x-input-label for="description" :value="__('Descreva seu pet')" />
-        <x-text-input id="description" class="block mt-1 w-full mb-4" 
+        <input type="text"
+        autofocus  
+        id="description" 
         name="description" 
-        required autofocus autocomplete="description"/>
+        class="block mt-1 w-full mb-4 border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" 
+        @isset($description) value="{{ $description }}"@endisset>
     </div>
     
     <div>
