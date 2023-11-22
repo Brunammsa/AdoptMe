@@ -161,7 +161,7 @@ h1{
     max-width: 30rem;
     max-height: 35rem;
     margin: 9rem auto 1.5rem auto;
-    padding: 0 1.5rem 2.5rem 1.5rem;
+    padding: 0 0 2.5rem 1.5rem;
     background-color:white;
     border-radius: .7rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -182,6 +182,7 @@ input{
     align-items: center;
     gap: 1rem;
     margin-top: 1rem;
+    padding-right: 1.5rem;
     justify-content: end;
 }
 
