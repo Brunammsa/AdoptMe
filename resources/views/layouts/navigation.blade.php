@@ -3,7 +3,7 @@
         <img src="{{ asset('images/header-bg.svg') }}" alt="imagem esquerda" class="header-app-left">
     </header>
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="sm:flex sm:justify-content-around flex justify-between h-16">
             
