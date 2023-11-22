@@ -41,7 +41,7 @@
         class="block mt-1 w-full mb-4 border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" 
         @isset($description) value="{{ $description }}"@endisset
         @empty($description)
-            placeholder="Carinhoso e brincalhão"
+             placeholder="Carinhoso e brincalhão"
         @endempty>
     </div>
     
@@ -49,12 +49,11 @@
         <x-input-label for="locale" :value="__('Onde está o pet?')" />
         <x-select-cities class="block mt-1 w-30 mb-4"/>
     </div>
-    {{-- <div class="mb-3">
+    <div class="mb-3">
         <x-input-label for="formFileSm" :value="__('Foto')" />
         <x-text-input id="formFileSm" class="form-control form-control-sm" 
         type="file" 
-        placeholder="ex.: carinhoso(a), companheiro(a)" />
-    </div> --}}
+    </div>
     <div class="botoes-create">
         <x-primary-button>Salvar</x-primary-button>
         <x-nav-link href="{{route('meusPets.index')}}">Voltar</x-nav-link>

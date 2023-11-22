@@ -134,6 +134,11 @@ footer{
     font-size: larger;
     font-weight: 500;
 }
+
+input::placeholder {
+    font-style: italic;
+    font-size: small;
+}
 /* pag adicionar pet */
 .cabecalho-novoPet{
     display: flex;
