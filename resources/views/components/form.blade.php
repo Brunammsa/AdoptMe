@@ -11,7 +11,10 @@
         id="name" 
         name="name" 
         class=" block mt-1 w-full mb-4 border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" 
-        @isset($name) value="{{ $name }}"@endisset>
+        @isset($name) value="{{ $name }}"@endisset
+        @empty($name)
+            placeholder="Floquinho"
+        @endempty>
     </div>
     <div>
         <x-input-label for="age" :value="__('Idade')" />
@@ -20,7 +23,10 @@
         id="age" 
         name="age" 
         class=" block mt-1 w-full mb-4 border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" 
-        @isset($age) value="{{ $age }}"@endisset>
+        @isset($age) value="{{ $age }}"@endisset
+        @empty($age)
+            placeholder="2 meses/anos"
+        @endempty>
     </div>
     <div>
         <x-input-label for="size" :value="__('Porte')" />
@@ -33,7 +39,10 @@
         id="description" 
         name="description" 
         class="block mt-1 w-full mb-4 border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" 
-        @isset($description) value="{{ $description }}"@endisset>
+        @isset($description) value="{{ $description }}"@endisset
+        @empty($description)
+            placeholder="Carinhoso e brincalhão"
+        @endempty>
     </div>
     
     <div>
