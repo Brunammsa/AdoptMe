@@ -130,7 +130,7 @@ footer{
     gap: 1rem;
 }
 .cabecalho-add-edit{
-    margin-top: 6rem;
+    margin-top: .5rem;
     font-size: larger;
     font-weight: 500;
 }
@@ -147,6 +147,7 @@ input::placeholder {
 
 .patas{
     width: 10rem;
+    padding-right: 0;
 }
 
 h1{
@@ -156,9 +157,11 @@ h1{
 }
 
 .section-create{
-    max-width: 35rem;
-    margin: 5rem auto 1.5rem auto;
-    padding: 0 0 2.5rem 2.5rem;
+    display: block;
+    max-width: 30rem;
+    max-height: 35rem;
+    margin: 9rem auto 1.5rem auto;
+    padding: 0 1.5rem 2.5rem 1.5rem;
     background-color:white;
     border-radius: .7rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -169,13 +172,17 @@ input{
     border-radius: .7rem;
 }
 .form-create{
-    margin-top: -4rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: -9rem;
 }
 
 .botoes-create{
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-top: 1rem;
+    justify-content: end;
 }
 
 /* pag edit pet */
@@ -206,6 +213,13 @@ input{
     }
     .p-footer{
         font-size: 1.4vw;
+    }
+    .section-create{
+        margin-top: 11rem;
+        padding-right: 0;
+    }
+    .botoes-create{
+        padding-right: 1.5rem;
     }
 }
 
@@ -240,6 +254,19 @@ input{
         padding: 3.5rem;
         margin-top: 40px;
     }
+
+    .form-create{
+        margin-top: -8.5rem;
+    }
+    .section-create{
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        padding-left: .5rem;
+        padding-right: 0;
+    }
+    .cabecalho-add-edit{
+        font-size: medium;
+    }
     .footer-pets{
         width: 45vw;
         margin-top: 30px;
@@ -248,5 +275,25 @@ input{
         display: flex;
         flex-wrap: wrap;
         font-size: 2.2vw;
+    }
+}
+
+@media (max-width: 300px) {
+    .main-app{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .logo{
+        width: 100%;
+    }
+    .patas{
+        width: 6rem;
+    }
+    footer{
+        max-width: 100%;
+    }
+    .section-create{
+        margin-top: 5rem;
+        margin-bottom: 100%;
     }
 }
