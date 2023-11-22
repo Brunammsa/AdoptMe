@@ -129,6 +129,11 @@ footer{
     flex-direction: row;
     gap: 1rem;
 }
+.cabecalho-add-edit{
+    margin-top: 6rem;
+    font-size: larger;
+    font-weight: 500;
+}
 /* pag adicionar pet */
 .cabecalho-novoPet{
     display: flex;
