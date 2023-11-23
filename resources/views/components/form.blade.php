@@ -1,4 +1,6 @@
-<form action="{{$action}}" class="form-create" method="POST">
+@props(['states', 'action', 'name', 'age', 'description', 'update'])
+
+<form action="{{$action}}" class="form-create" method="POST" enctype="multipart/form-data">
     @csrf
     @if($update)
         @method('put')
@@ -43,7 +45,7 @@
     
     <div>
         <x-input-label for="locale" :value="__('Onde está o pet?')" />
-        <x-select-cities class="block mt-1 w-30 mb-4"/>
+        <x-select-cities class="block mt-1 w-30 mb-3" name="state" :states="$states"/>
     </div>
     <div>
         <x-input-label for="size" :value="__('Porte')" />
@@ -51,10 +53,15 @@
     </div>
     <div>
         <x-input-label for="formFileSm" :value="__('Foto')" />
-        <input class="form-control form-control-sm mt-1" id="formFileSm" type="file">
+        <input class="form-control form-control-sm mt-1"
+        id="formFileSm"
+        type="file"
+        name="file"
+        required
+        >
     </div>
     <div class="botoes-create">
-        <x-primary-button>Salvar</x-primary-button>
+        <x-primary-button value="updload">Salvar</x-primary-button>
         <x-nav-link href="{{route('meusPets.index')}}">Voltar</x-nav-link>
     </div>
 </form>
