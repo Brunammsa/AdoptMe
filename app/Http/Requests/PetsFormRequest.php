@@ -23,8 +23,8 @@ class PetsFormRequest extends FormRequest
     {
         return [
             'name' => ['required', 'min:2'],
-            'age' => 'required',
-            'description' => 'required'
+            'age' => ['required', 'max:15'],
+            'description' => ['required', 'max:100'],
         ];
     }
 }
