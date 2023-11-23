@@ -9,6 +9,7 @@
             :age="$pets->age"
             :description="$pets->description"
             :update="true"
+            :states="$states"
             ></x-form>
     </section>
 </x-app-layout>
