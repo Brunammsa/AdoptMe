@@ -1,16 +1,27 @@
-<select id="state" {!! $attributes->merge(['class' => 'border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm']) !!}>
-    <option selected>Selecione o Estado</option>
-    @isset($states)
-        @foreach ($states as $state)
-            <option value="{{$state->id}}">{{ $state->abbreviation }}</option>
-        @endforeach
-    @endisset
+@props(['states'])
 
-</select>
+<div class="select-estados">
+    <select  {!! $attributes->merge([
+            'class' => 'border-gray-300 focus:border-indigo-500 text-sm focus:ring-indigo-500 rounded-md shadow-sm',
+            'id' => 'state'   
+        ]) !!}>
 
-<select {!! $attributes->merge(['class' => 'border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm', 'id' => 'city', 'disabled'=> 'true']) !!}>
-    <option selected>Cidade</option>
-</select>
+        <option selected>Estado</option>
+        @isset($states)
+            @foreach ($states as $state)
+                <option value="{{$state->id}}">{{ $state->abbreviation }}</option>
+            @endforeach
+        @endisset
+    </select>
+    
+    <select {!! $attributes->merge([
+                'class' => 'border-gray-300 text-sm focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm', 
+                'id' => 'city', 'disabled'=> 'true'
+            ]) !!}>
+            
+        <option selected>Cidade</option>
+    </select>
+</div>
 
 <script>
     let stateSelect = document.getElementById('state');
