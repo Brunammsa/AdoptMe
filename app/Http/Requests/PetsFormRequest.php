@@ -25,6 +25,7 @@ class PetsFormRequest extends FormRequest
             'name' => ['required', 'min:2'],
             'age' => ['required', 'max:15'],
             'description' => ['required', 'max:100'],
+            'image' => ['required', 'mimes:jpeg,png,jpg', 'max:5048'],
         ];
     }
 }
