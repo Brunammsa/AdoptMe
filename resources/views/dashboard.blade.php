@@ -10,7 +10,7 @@
                                 <div class="row g-0">
                                     <div class="col-md-4">
                                         <tr>
-                                            <td><img src="{{ asset('upload/haru.png') }}" style="height: 100px; width: 100px"></td>
+                                            <td><img src="{{ asset('upload/' . $file->name_upload) }}" style="height: 100px; width: 100px"></td>
                                         </tr>
                                         </tbody>
                                     </div>
@@ -35,7 +35,6 @@
                             </div>
                         </li>
                     @endforeach
-
                 @endforeach
             </ul>
         </div>
