@@ -188,7 +188,6 @@ input{
 }
 
 /* pag edit pet */
-
 .input-text{
     display: block;
     border-radius: 0.375rem;
@@ -200,6 +199,11 @@ input{
     margin-bottom: -.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* index all */
+
+
+
 /* responsividade */
 @media(max-width: 1200px) {
     .header-guest-left{
