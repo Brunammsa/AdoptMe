@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -13,11 +14,14 @@ return new class extends Migration
     {
         Schema::create('files', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('pets_id')->constrained('pets')->onDelete('cascade');
+            $table->foreignId('pets_id')->constrained()->onDelete('cascade');
             $table->string('name_upload');
             $table->string('mime');
             $table->timestamps();
         });
+
+        DB::statement("ALTER TABLE files ADD file MEDIUMBLOB");
+
     }
 
     /**
