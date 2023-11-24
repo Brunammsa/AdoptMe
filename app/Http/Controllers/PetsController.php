@@ -23,9 +23,11 @@ class PetsController extends Controller
     public function create(): View
     {
         $states = States::all();
+        $cities = Cities::all();
 
         return view('meusPets.create')
-                ->with('states', $states);
+                ->with('states', $states)
+                ->with('cities', $cities);
     }
 
     public function store(PetsFormRequest $request)
@@ -37,14 +39,16 @@ class PetsController extends Controller
             $mime = $request->file('image')->getClientMimeType();
         };
 
-        $userId = User::where('name', Auth::user()->name)->first()->id;
+        $request->image->move('upload/', $request->file('image')->getClientOriginalName());
 
+        $userId = User::where('name', Auth::user()->name)->first()->id;
         $pet = Pets::create([
             'name' => ucfirst($request->name),
             'age' => $request->age,
             'size' => $request->size,
             'description' => ucfirst($request->description),
-            'users_id' => $userId
+            'users_id' => $userId,
+            'cities_id' => $request->city
         ]);
 
         $petId = $pet->id;
@@ -94,8 +98,15 @@ class PetsController extends Controller
 
     public function allPets(): View
     {
-        $pets = Pets::orderBy('created_at', 'desc')->simplePaginate(4);
+        $pets = Pets::all();
+        $files = Files::all();
+        $cities = Cities::all();
+        $files = Files::all();
     
-        return view('dashboard')->with('pets', $pets);
+        return view('dashboard')
+                ->with('pets', $pets)
+                ->with('files', $files)
+                ->with('cities', $cities)
+                ->with('files', $files);
     }
 }
