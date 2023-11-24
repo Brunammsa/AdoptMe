@@ -56,7 +56,7 @@
         <input class="form-control form-control-sm mt-1"
         id="formFileSm"
         type="file"
-        name="file"
+        name="image"
         required
         >
     </div>
