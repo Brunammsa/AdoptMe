@@ -7,6 +7,7 @@
         <x-form :action="route('meusPets.store')" 
         :update="false"
         :states="$states"
+        :cities="$cities"
         ></x-form>
     </section>
 </x-app-layout>
