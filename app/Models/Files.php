@@ -12,6 +12,7 @@ class Files extends Model
         'name_upload',
         'mime',
         'pets_id',
+        'file'
     ];
 
     public function pets()

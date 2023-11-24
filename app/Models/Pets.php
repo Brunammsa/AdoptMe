@@ -25,7 +25,7 @@ class Pets extends Model
     
     public function files()
     {
-        return $this->hasOne(Files::class);
+        return $this->hasMany(Files::class, 'pets_id');
     }
 
     public function cities()
