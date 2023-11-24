@@ -1,4 +1,4 @@
-@props(['states'])
+@props(['states', 'cities'])
 
 <div class="select-estados">
     <select  {!! $attributes->merge([
@@ -20,6 +20,9 @@
             ]) !!}>
             
         <option selected>Cidade</option>
+        @foreach ($cities as $city)
+            <option value="{{$city->id}}">{{$city->name}}</option>
+        @endforeach
     </select>
 </div>
 
