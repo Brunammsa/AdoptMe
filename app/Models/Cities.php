@@ -15,7 +15,7 @@ class Cities extends Model
 
     public function states()
     {
-        return $this->belongsTo(State::class, 'states_id', 'cities_id');
+        return $this->belongsTo(States::class, 'state_id');
     }
 
     public function pets()

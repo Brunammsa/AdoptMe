@@ -14,7 +14,7 @@ class Pets extends Model
         'age',
         'size',
         'description',
-        'city_id',
+        'cities_id',
         'users_id',
     ];
 
@@ -30,6 +30,6 @@ class Pets extends Model
 
     public function cities()
     {
-        return $this-> belongsTo(City::class, 'cities_id');
+        return $this-> belongsTo(Cities::class, 'cities_id');
     }
 }
