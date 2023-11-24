@@ -1,4 +1,4 @@
-@props(['states', 'action', 'name', 'age', 'description', 'update'])
+@props(['states', 'action', 'name', 'age', 'description', 'update', 'cities'])
 
 <form action="{{$action}}" class="form-create" method="POST" enctype="multipart/form-data">
     @csrf
@@ -45,7 +45,7 @@
     
     <div>
         <x-input-label for="locale" :value="__('Onde está o pet?')" />
-        <x-select-cities class="block mt-1 w-30 mb-3" name="state" :states="$states"/>
+        <x-select-cities class="block mt-1 w-30 mb-3" name="city" :states="$states" :cities="$cities"/>
     </div>
     <div>
         <x-input-label for="size" :value="__('Porte')" />
