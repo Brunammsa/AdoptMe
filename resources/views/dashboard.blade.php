@@ -4,15 +4,16 @@
         <div class="pets">
             <ul>
                 @foreach ($pets as $pet)
-                    @foreach ($files as $file)
+                    @php
+                        $petImage = $files::where('pets_id', $pet->id)->first()
+                    @endphp
                         <li>
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">
                                     <div class="col-md-4">
                                         <tr>
-                                            <td><img src="{{ asset('upload/' . $file->name_upload) }}" style="height: 100px; width: 100px"></td>
+                                            <td><img src="{{ asset('upload/' . $petImage->name_upload) }}" style="height: 100px; width: 100px"></td>
                                         </tr>
-                                        </tbody>
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
@@ -22,8 +23,7 @@
                                             <p class="card-text">{{$pet->size}}</p>
                                             <p class="card-text">{{$pet->description}}</p>
                                             <small class="text-body-secondary">
-                                                {{ $pet->cities->name ?? 'Cidade não encontrada' }} /
-                                                {{ $pet->cities->states->abbreviation}}
+                                                {{ $pet->cities->name}}/{{ $pet->cities->states->abbreviation}}
                                             </small>
                                         </div>
                                         <div>
@@ -34,7 +34,6 @@
                                 </div>
                             </div>
                         </li>
-                    @endforeach
                 @endforeach
             </ul>
         </div>
