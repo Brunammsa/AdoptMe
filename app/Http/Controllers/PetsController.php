@@ -99,14 +99,12 @@ class PetsController extends Controller
     public function allPets(): View
     {
         $pets = Pets::all();
-        $files = Files::all();
         $cities = Cities::all();
-        $files = Files::all();
+        $files = Files::class;
     
         return view('dashboard')
                 ->with('pets', $pets)
                 ->with('files', $files)
-                ->with('cities', $cities)
-                ->with('files', $files);
+                ->with('cities', $cities);
     }
 }
