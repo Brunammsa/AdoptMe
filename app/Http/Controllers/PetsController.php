@@ -77,12 +77,31 @@ class PetsController extends Controller
 
     public function update($id, PetsFormRequest $request)
     {   
+        if ($request->hasFile('image')) {           
+            $path = $request->file('image')->path();
+            $doc = file_get_contents($path);
+            $base64 = base64_encode($doc);
+            $mime = $request->file('image')->getClientMimeType();
+        };
+
+        $request->image->move('upload/', $request->file('image')->getClientOriginalName());
+
+        $files = Files::find($id);
+
+        $files->pets_id = $id;
+        $files->name_upload = $request->file('image')->getClientOriginalName();
+        $files->file = $base64;
+        $files->mime = $mime;
+
+        $files->update();
+
         $pets = Pets::find($id);
 
         $pets->name = ucfirst($request->name);
         $pets->age = $request->age;
         $pets->size = $request->size;
         $pets->description = ucfirst($request->description);
+        $pets->cities_id = $request->city;
 
         $pets->update();
 
