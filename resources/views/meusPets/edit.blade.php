@@ -10,6 +10,7 @@
             :description="$pets->description"
             :update="true"
             :states="$states"
+            :cities="$cities"
             ></x-form>
     </section>
 </x-app-layout>
