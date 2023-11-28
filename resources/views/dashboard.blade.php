@@ -7,7 +7,9 @@
                     $petImage = $files::where('pets_id', $pet->id)->first()
                 @endphp
                 <li class="container-pet-dashboard">
-                    <img class="pet-image" src="{{ asset('upload/' . $petImage->name_upload) }}" style="height: 150px; width: 150px">
+                    <div class="pet-image">
+                        <img class="img-pets" src="{{ asset('upload/' . $petImage->name_upload) }}">
+                    </div>
                     <small class="card-title">Nome: <strong>{{$pet->name}}</strong></small>
                     <small class="card-text">Idade: {{$pet->age}}</small>
                     <small class="card-text">Porte: {{$pet->size}}</small>
