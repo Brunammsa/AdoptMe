@@ -36,7 +36,7 @@ header{
 }
 
 .phrase-app{
-    margin-top: 2rem;
+    margin-top: 7.5rem;
     margin-bottom: 2rem;
     text-align: center;
     color: #3772FF;
@@ -56,21 +56,50 @@ header{
     max-width: 50%;
 }
 
-.section-app{
-    max-width: 80rem;
-    margin: auto;
-    padding: 7rem;
-}
-
 .perfil-app{
     display: flex;
     margin-top: 123px;
 }
 
+/* dashboard pets */
+.ul-app{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 2rem 11rem 8rem 11rem;
+}
+
+.container-pet-dashboard{
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+    gap: .2rem;
+    padding: 1rem;
+    border-radius: .7rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* .pet-image{
+
+} */
+
+.text-body-secondary{
+    display: flex;
+    justify-content: end;
+}
+
+.button-responsavel{
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
 /* footer */
 .p-footer{
-    padding: 0;
-    font-size: 1vw;
+    margin: .5rem;
+    font-size: .8vw;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -78,7 +107,7 @@ footer{
     text-align: center;
     background-color: #36D6AD;
     color: white;
-    padding: 15px;
+    padding: 0px;
 }
 
 /* pag meus pets */
@@ -227,6 +256,9 @@ input{
     .botoes-create{
         padding-right: 1.5rem;
     }
+        .phrase-app{
+        margin: 11rem 2.5rem 2rem 2.5rem;
+    }
 }
 
 @media(max-width: 637px) {
@@ -242,6 +274,9 @@ input{
 
     .p-footer{
         font-size: 1.5vw;
+    }
+    .phrase-app{
+        margin: 12rem 2.5rem 2rem 2.5rem;
     }
 }
 
@@ -281,6 +316,12 @@ input{
         display: flex;
         flex-wrap: wrap;
         font-size: 2.2vw;
+    }
+    .ul-app{
+        margin: 0 3rem 8rem 3rem;
+    }
+    .phrase-app{
+        margin: 9rem 2.5rem 2rem 2.5rem;
     }
 }
 
