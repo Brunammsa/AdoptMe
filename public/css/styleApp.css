@@ -81,9 +81,17 @@ header{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* .pet-image{
+.pet-image{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
 
-} */
+.img-pets{
+    border-radius: 20%;
+    height: 150px;
+    width: 150px;
+}
 
 .text-body-secondary{
     display: flex;
