@@ -338,6 +338,14 @@ input{
     .phrase-app{
         margin: 12rem 2.5rem 2rem 2.5rem;
     }
+    .select-estados{
+        display: flex;
+        flex-direction: column;
+        width:fit-content;
+    }
+    .section-create{
+        max-height: 39rem;
+    }
 }
 
 @media(max-width: 500px) {
@@ -365,6 +373,10 @@ input{
         padding-left: .5rem;
         padding-right: 0;
     }
+    .section-meusPets{
+        margin: 10rem auto auto auto;
+        background-color: rgba(239, 239, 239, 0.56);
+    }
     .cabecalho-add-edit{
         font-size: medium;
     }
@@ -378,7 +390,7 @@ input{
         font-size: 2.2vw;
     }
     .ul-app{
-        margin: 0 .5rem 8rem .5rem;
+        margin: 0 0 8rem 0;
     }
     .phrase-app{
         margin: 9rem 2.5rem 2rem 2.5rem;
@@ -408,8 +420,23 @@ input{
     .section-create{
         margin-top: 5rem;
         margin-bottom: 100%;
+        max-width: 35rem;
     }
+
     .container-show{
         margin: 2rem auto 5rem auto;
+    }
+    .container-pet-dashboard{
+        padding: .5rem;
+    }
+    .img-pets{
+        height: 120px;
+        width: 120px;
+    }
+    .text-body-secondary{
+        font-size: xx-small;
+    }
+    .msg-dashboard{
+        font-size: xx-small;
     }
 }
