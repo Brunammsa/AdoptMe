@@ -12,7 +12,7 @@
         autofocus  
         id="name" 
         name="name" 
-        class="block mt-1 w-60 mb-3 border-gray-300 text-sm focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" 
+        class="block mt-1 w-50 mb-3 border-gray-300 text-sm focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" 
         @isset($name) value="{{ $name }}"@endisset
         @empty($name)
             placeholder="Floquinho"
@@ -24,7 +24,7 @@
         autofocus  
         id="age" 
         name="age" 
-        class=" block mt-1 w-60 mb-3 border-gray-300 text-sm focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" 
+        class=" block mt-1 w-50 mb-3 border-gray-300 text-sm focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" 
         @isset($age) value="{{ $age }}"@endisset
         @empty($age)
             placeholder="2 meses/anos"
@@ -45,7 +45,7 @@
     
     <div>
         <x-input-label for="locale" :value="__('Onde está o pet?')" />
-        <x-select-cities class="block mt-1 w-30 mb-3" name="city" :states="$states" :cities="$cities"/>
+        <x-select-cities class="block text-sm mt-1 w-30 mb-3" name="city" :states="$states" :cities="$cities"/>
     </div>
     <div>
         <x-input-label for="size" :value="__('Porte')" />
