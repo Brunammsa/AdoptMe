@@ -22,7 +22,7 @@
                             <a href="#">
                                 <img src="{{asset('images/iconeMensagem.png')}}" alt="">
                             </a>
-                            <small>Falar com o responsável</small>
+                            <small class="msg-dashboard">Falar com o responsável</small>
                         </div>
                     </div>
                 </li>
