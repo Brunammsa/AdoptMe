@@ -11,7 +11,7 @@
                 @else
                     @foreach ($pets as $pet)
                         <li class="container-pets">
-                            {{$pet->name}}
+                            <a class="link-pet" href="{{route('meusPets.show', $pet->id)}}">{{$pet->name}}</a>
                             <div class="icones-att-del">
                                 <a href="{{route('meusPets.edit', $pet->id)}}">
                                     <img src="{{asset('images/edit.png')}}" alt="editar pet">
