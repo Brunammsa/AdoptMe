@@ -131,6 +131,10 @@ footer{
 }
 
 /* pag meus pets */
+.link-pet{
+    color: #3772FF;
+    font-weight: 600;
+}
 .section-meusPets{
     max-width: 42rem;
     margin: 15rem auto auto auto;
@@ -249,7 +253,7 @@ input{
 .pet-image-show{
     display: flex;
     flex-wrap: wrap;
-    margin: 14rem auto 1.5rem auto;
+    margin: 10rem auto 1.5rem auto;
     border-radius: 20%;
     height: 160px;
     width: 160px;
@@ -382,6 +386,9 @@ input{
     .pet-image-show{
         margin: 10rem auto 1.5rem auto;
     }
+    .container-show{
+        margin: 2rem auto 5rem auto;
+    }
 }
 
 @media (max-width: 300px) {
@@ -403,6 +410,6 @@ input{
         margin-bottom: 100%;
     }
     .container-show{
-        margin: 2rem auto 2.5rem auto;
+        margin: 2rem auto 5rem auto;
     }
 }
