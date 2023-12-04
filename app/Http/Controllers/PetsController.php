@@ -63,6 +63,16 @@ class PetsController extends Controller
         return to_route('meusPets.index');
     }
 
+    public function show(int $id)
+    {
+        $pet = Pets::find($id);
+        $petImage = Files::where('pets_id', $id)->first();
+
+        return view('meusPets.show')
+                ->with('pet', $pet)
+                ->with('petImage', $petImage);
+    }
+
     public function edit(Pets $pets)
     {
         $states = States::all();
