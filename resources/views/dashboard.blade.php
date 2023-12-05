@@ -26,5 +26,6 @@
                     </div>
                 </li>
             @endforeach
+            {{ $pets->onEachSide(3)->links() }}
         </ul>
 </x-app-layout>

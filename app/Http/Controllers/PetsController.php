@@ -16,7 +16,7 @@ class PetsController extends Controller
 {
     public function index(): View
     {
-        $pets = Pets::where('users_id', Auth::user()->id)->get();
+        $pets = Pets::where('users_id', Auth::user()->id)->simplePaginate(6);;
 
         return view('meusPets.index')->with('pets', $pets);
     }
@@ -128,7 +128,7 @@ class PetsController extends Controller
 
     public function allPets(): View
     {
-        $pets = Pets::all();
+        $pets = Pets::paginate(6);
         $cities = Cities::all();
         $files = Files::class;
     

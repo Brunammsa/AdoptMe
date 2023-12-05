@@ -30,6 +30,7 @@
                         <hr>
                     @endforeach
                 @endif
+                {{ $pets->onEachSide(3)->links() }}
             </ul>
         </div>
     </section>
