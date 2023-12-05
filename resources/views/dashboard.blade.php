@@ -26,6 +26,9 @@
                     </div>
                 </li>
             @endforeach
-            {{ $pets->onEachSide(3)->links() }}
         </ul>
+        <div class="paginate">
+            {{ $pets->onEachSide(3)->links() }}
+        </div>
+
 </x-app-layout>

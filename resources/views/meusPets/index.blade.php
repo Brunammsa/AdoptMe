@@ -30,9 +30,11 @@
                         <hr>
                     @endforeach
                 @endif
-                {{ $pets->onEachSide(3)->links() }}
             </ul>
         </div>
     </section>
+    <div class="paginate">
+        {{ $pets->onEachSide(3)->links() }}
+    </div>
 </x-app-layout>
 

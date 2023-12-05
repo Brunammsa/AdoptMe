@@ -73,7 +73,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin: 2rem 11rem 8rem 11rem;
+    margin: 2rem 11rem 2rem 11rem;
 }
 
 .container-pet-dashboard{
@@ -354,6 +354,12 @@ input{
     max-width: 30rem;
 }
 
+.paginate{
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content:center;
+}
 /* responsividade */
 @media(max-width: 1200px) {
     .header-guest-left{
@@ -461,7 +467,7 @@ input{
         padding-right: 0;
     }
     .section-meusPets{
-        margin: 10rem auto 5rem auto;
+        margin: 10rem auto 2rem auto;
         background-color: rgba(239, 239, 239, 0.642);
     }
     .cabecalho-add-edit{
@@ -476,7 +482,7 @@ input{
         justify-content: center;
     }
     .ul-app{
-        margin: 0 0 8rem 0;
+        margin: 0 0 2rem 0;
     }
     .phrase-app{
         margin: 9rem 2.5rem 2rem 2.5rem;
@@ -536,7 +542,7 @@ input{
         background-color: rgba(239, 239, 239, 0.742);
     }
     .ul-app{
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
     }
     .img-pets{
         height: 105px;
