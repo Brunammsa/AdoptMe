@@ -49,6 +49,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/meusPets/{pets}/edit', [PetsController::class, 'edit'])->name('meusPets.edit');
     Route::put('/meusPets/atualizar/{id}', [PetsController::class, 'update'])->name('meusPets.update');
     Route::delete('/meusPets/excluir/{id}', [PetsController::class, 'destroy'])->name('meusPets.destroy');
+    Route::get('/meusPets/contato', [PetsController::class, 'contact'])->name('meusPets.contact');
+    Route::post('/meusPets/contato', [PetsController::class, 'contactForm'])->name('meusPets.contactForm');
     Route::get('/meusPets/{id}', [PetsController::class, 'show'])->name('meusPets.show');
 });
 
