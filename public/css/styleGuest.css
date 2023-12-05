@@ -52,6 +52,15 @@ header{
 .p-login, h2{
     margin-bottom: 1rem;
 }
+.article-guest{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.phrase-guest-long{
+    max-width: 26rem;
+}
 
 #phrase-guest-short{
     display: none;
@@ -101,8 +110,7 @@ footer{
         width: 30%;
     }
     .phrase-guest{
-        margin-left: 15rem;
-        margin-right: 15rem;
+        max-width: 42rem;
     }
     main{
         gap: 0px;
@@ -111,7 +119,7 @@ footer{
         margin-top: 2rem;
     }
     .image-pets-footer{
-        width: 20%;
+        width: 35%;
     }
 }
 
@@ -135,8 +143,7 @@ footer{
         font-size: small;
     }
     .phrase-guest{
-        margin-left: 10rem;
-        margin-right: 10rem;
+        max-width: 20rem;
     }
     .p-login{
         margin-top: 2rem;
@@ -151,7 +158,7 @@ footer{
 
 @media(max-width: 500px) {
     .image-header{
-        width: 50%;
+        width: 60%;
     }
     .imagem-body-direita{
         height: 30%;
@@ -160,11 +167,10 @@ footer{
         width: 45%;
     }
     .image-pets-footer{
-        width: 40%;
+        width: 50%;
     }
     .phrase-guest{
-        margin-left: 3rem;
-        margin-right: 3rem;
+        max-width: 15rem;
     }
     #phrase-guest-long{
         display: none;
