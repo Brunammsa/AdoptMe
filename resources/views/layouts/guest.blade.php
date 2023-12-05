@@ -24,8 +24,10 @@
                 </picture>
                 <article class="article-guest">
                     <h2>Boas-vindas!</h2>
-                    <p id="phrase-guest-long" class="phrase-guest">Adotar pode mudar uma vida.<br>Que tal buscar seu novo melhor amigo hoje?<br>Vem com a gente!</p>
-                    <p id="phrase-guest-short" class="phrase-guest">Que tal mudar sua vida adotando seu novo<br> melhor amigo? Vem com a gente!</p>
+                    <div>
+                        <p id="phrase-guest-long" class="phrase-guest-long">Adotar pode mudar uma vida. Que tal buscar seu novo melhor amigo hoje? Vem com a gente!</p>
+                        <p id="phrase-guest-short" class="phrase-guest">Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!</p>
+                    </div>
                 </article>
                 <div>
                     {{ $slot }}
@@ -43,16 +45,4 @@
         </div>
         
     </body>
-    {{-- <script>
-        function ajusteDeConteudo(){
-            let tagP = document.getElementById("phrase-guest");
-            if (window.innerWidth <= 770){
-                tagP.innerHTML = "Que tal mudar sua vida\n adotando seu novo melhor\n amigo? Vem com a gente!";
-            } else {
-                tagP.innerHTML = ;
-            }
-        }
-        window.onload = ajusteDeConteudo;
-        window.onresize = ajusteDeConteudo;
-    </script> --}}
 </html>
