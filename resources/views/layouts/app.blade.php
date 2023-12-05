@@ -23,7 +23,7 @@
                 {{ $slot }}
             </main>
             <footer>
-                <p class="p-footer">2023 - Desenvolvido através do Challenger Alura por <a href="https://github.com/Brunammsa" target='_blank' rel="external">BMMSA</a> para fins gratuitos</p>
+                <p class="p-footer">2023 - Desenvolvido através do Challenger Alura por <a href="https://github.com/Brunammsa" target='_blank' rel="external" class=" font-bold">BMMSA</a> para fins gratuitos</p>
             </footer>
         </div>
     </body>

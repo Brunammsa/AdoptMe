@@ -37,10 +37,7 @@
                 <img src="{{asset('images/pets.svg')}}" alt="pets guest" class="image-pets-footer">
             </picture>
             <footer>
-                <p>
-                    2023 - Desenvolvido através do Challenger Alura por 
-                    <a href="https://github.com/Brunammsa" target='_blank' rel="external">BMMSA</a> - sem fins lucrativos.
-                </p>
+                <p class="p-footer">2023 - Desenvolvido através do Challenger Alura por <a href="https://github.com/Brunammsa" target='_blank' rel="external" class=" font-bold">BMMSA</a> para fins gratuitos</p>
             </footer>
         </div>
         
