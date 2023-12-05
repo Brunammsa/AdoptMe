@@ -47,7 +47,13 @@ header{
     font-family: 'Poppins', sans-serif;
     flex: 1;
 }
-
+.imagem-body-direita {
+    position: absolute;
+    top: 10rem;
+    right: 0;
+    z-index: -1;
+    height: 60%;
+}
 .logo-app{
     max-width: 30%;
 }
@@ -62,22 +68,21 @@ header{
 }
 
 /* dashboard pets */
-.ul-app{
+.ul-app {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    flex-direction: row;
     gap: 1rem;
     margin: 2rem 11rem 8rem 11rem;
 }
 
 .container-pet-dashboard{
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
-    max-width: fit-content;
+    width: 32%;
     color: #737380;
     background-color: rgb(239, 239, 239);
-    gap: 1rem;
     align-items: center;
     padding: 1rem;
 }
@@ -108,11 +113,11 @@ header{
     display: flex;
     justify-content: end;
     margin-top: .5rem;
+    font-size: x-small;
 }
 
 .button-responsavel{
     display: flex;
-    align-items: center;
     gap: .4rem;
 }
 
@@ -376,10 +381,16 @@ input{
         margin: 11rem 2.5rem 2rem 2.5rem;
     }
     .ul-app{
-        margin: 2rem 3rem 8rem 3rem;
+        margin: 2rem auto 8rem 1rem;
     }
     .section-message{
         width: 65%;
+    }
+    .container-pet-dashboard{
+        padding: .5rem;
+        width: 48%;
+        background-color: rgba(239, 239, 239, 0.742);
+        justify-content:space-around
     }
 }
 
@@ -416,6 +427,12 @@ input{
         margin-top: 6rem;
         margin-bottom: 1rem;
     }
+    .container-pet-dashboard{
+        padding: .5rem;
+        width: 100%;
+        background-color: rgba(239, 239, 239, 0.742);
+        justify-content:space-around
+    }
 }
 
 @media(max-width: 500px) {
@@ -444,8 +461,8 @@ input{
         padding-right: 0;
     }
     .section-meusPets{
-        margin: 10rem auto auto auto;
-        background-color: rgba(239, 239, 239, 0.56);
+        margin: 10rem auto 5rem auto;
+        background-color: rgba(239, 239, 239, 0.642);
     }
     .cabecalho-add-edit{
         font-size: medium;
@@ -469,6 +486,8 @@ input{
     }
     .container-show{
         margin: 2rem auto 5rem auto;
+        background-color: rgba(239, 239, 239, 0.791);
+
     }
     .text-area {
         height: 6rem;
@@ -478,6 +497,12 @@ input{
     }
     .section-message{
         width: 90%;
+    }
+    .container-pet-dashboard{
+        padding: .5rem;
+        width: 100%;
+        background-color: rgba(239, 239, 239, 0.742);
+        justify-content:space-around
     }
 }
 
@@ -503,13 +528,19 @@ input{
 
     .container-show{
         margin: 2rem auto 5rem auto;
+        background-color: rgba(239, 239, 239, 0.791);
     }
     .container-pet-dashboard{
         padding: .5rem;
+        width: 100%;
+        background-color: rgba(239, 239, 239, 0.742);
+    }
+    .ul-app{
+        margin-bottom: 3rem;
     }
     .img-pets{
-        height: 120px;
-        width: 120px;
+        height: 105px;
+        width: 105px;
     }
     .text-body-secondary{
         font-size: xx-small;

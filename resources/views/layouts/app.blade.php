@@ -17,6 +17,7 @@
     <body>
         <div class="container-app">
             @include('layouts.navigation')
+            <img src="{{asset('images/body-bg.svg')}}" alt="imagem direita" class="imagem-body-direita">
 
             <!-- Page Content -->
             <main class="main-app">
