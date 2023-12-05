@@ -116,6 +116,9 @@ header{
     gap: .4rem;
 }
 
+.msg-dashboard{
+    font-size: x-small;
+}
 /* footer */
 .p-footer{
     margin: .5rem;
@@ -509,9 +512,6 @@ input{
         width: 120px;
     }
     .text-body-secondary{
-        font-size: xx-small;
-    }
-    .msg-dashboard{
         font-size: xx-small;
     }
     .text-area {

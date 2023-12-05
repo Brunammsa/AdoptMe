@@ -21,7 +21,7 @@
                             <a href="{{route('meusPets.contact')}}">
                                 <img src="{{asset('images/iconeMensagem.png')}}" alt="">
                             </a>
-                            <small class="msg-dashboard">Falar com o responsável</small>
+                            <p class="msg-dashboard">Falar com o responsável</p>
                         </div>
                     </div>
                 </li>
