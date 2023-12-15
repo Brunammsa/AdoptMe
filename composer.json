@@ -11,7 +11,10 @@
         "laravel/sanctum": "^3.3",
         "laravel/socialite": "^5.10",
         "laravel/tinker": "^2.8",
-        "ramsey/uuid": "^4.7"
+        "php-amqplib/php-amqplib": "^3.6",
+        "ramsey/uuid": "^4.7",
+        "resend/resend-laravel": "^0.7.1",
+        "resend/resend-php": "^0.9.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
