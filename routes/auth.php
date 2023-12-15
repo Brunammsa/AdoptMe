@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\LoginSocialiteController;
+use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PetsController;
 
@@ -49,10 +50,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/meusPets/{pets}/edit', [PetsController::class, 'edit'])->name('meusPets.edit');
     Route::put('/meusPets/atualizar/{id}', [PetsController::class, 'update'])->name('meusPets.update');
     Route::delete('/meusPets/excluir/{id}', [PetsController::class, 'destroy'])->name('meusPets.destroy');
-    Route::get('/meusPets/contato', [PetsController::class, 'contact'])->name('meusPets.contact');
-    Route::post('/meusPets/contato', [PetsController::class, 'contactForm'])->name('meusPets.contactForm');
-    Route::get('/meusPets/{id}', [PetsController::class, 'show'])->name('meusPets.show');
+    Route::get('/pet/contato', [PetsController::class, 'contact'])->name('meusPets.contact');
+    Route::get('/pet/{id}', [PetsController::class, 'show'])->name('meusPets.show');
 });
+
+Route::resource('/mensagem', MailController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy'])
+    ->middleware(['auth', 'verified']);
 
 Route::middleware('auth')->group(function () {
     Route::get('verify-email', EmailVerificationPromptController::class)
