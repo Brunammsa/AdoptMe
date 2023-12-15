@@ -137,8 +137,8 @@ class PetsController extends Controller
                 ->with('cities', $cities);
     }
 
-    public function contact(): View
+    public function contact(Pets $id): View
     {
-        return view('petMessage.formMessage');
+        return view('petMessage.formMessage')->with('id', $id);
     }
 }
