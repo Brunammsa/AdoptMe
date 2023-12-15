@@ -14,7 +14,6 @@
         </div>
         <div class="back">
             <x-nav-link href="{{route('dashboard')}}">Menu principal</x-nav-link>
-            <x-nav-link href="{{route('meusPets.index')}}">Meus pets</x-nav-link>
         </div>
     </div>
 </x-app-layout>
