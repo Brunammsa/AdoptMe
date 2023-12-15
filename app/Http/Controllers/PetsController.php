@@ -8,7 +8,6 @@ use App\Models\Files;
 use App\Models\Pets;
 use App\Models\States;
 use App\Models\User;
-use GuzzleHttp\Psr7\Request;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Auth;
 
@@ -141,10 +140,5 @@ class PetsController extends Controller
     public function contact(): View
     {
         return view('petMessage.formMessage');
-    }
-
-    public function contactForm(Request $request)
-    {
-        dd($request);
     }
 }
