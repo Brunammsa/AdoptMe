@@ -50,13 +50,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/meusPets/{pets}/edit', [PetsController::class, 'edit'])->name('meusPets.edit');
     Route::put('/meusPets/atualizar/{id}', [PetsController::class, 'update'])->name('meusPets.update');
     Route::delete('/meusPets/excluir/{id}', [PetsController::class, 'destroy'])->name('meusPets.destroy');
-    Route::get('/pet/contato', [PetsController::class, 'contact'])->name('meusPets.contact');
     Route::get('/pet/{id}', [PetsController::class, 'show'])->name('meusPets.show');
 });
 
-Route::resource('/mensagem', MailController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy'])
-    ->middleware(['auth', 'verified']);
+Route::middleware(['auth', 'verified'])->group(function (){
+    Route::get('/pet/contato/{id}', [MailController::class, 'contact'])->name('pet.contact');
+    Route::post('/pet/mensagem/{id}', [MailController::class, 'formMessage'])->name('mensagem.formMessage');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('verify-email', EmailVerificationPromptController::class)
