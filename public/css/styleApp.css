@@ -323,7 +323,12 @@ input{
     height: 10rem;
     resize: none;
 }
-.label-mensagem{
+.form-message{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.label-form-message{
     color: #3772FF;
     font-weight: 600;
 }

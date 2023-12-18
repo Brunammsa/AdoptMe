@@ -16,6 +16,7 @@ class Pets extends Model
         'description',
         'cities_id',
         'users_id',
+        'id',
     ];
 
     public function users()
