@@ -230,7 +230,7 @@ h1{
 }
 
 input{
-    max-width: 30rem;
+    /* max-width: 30rem; */
     border-radius: .7rem;
 }
 .form-create{

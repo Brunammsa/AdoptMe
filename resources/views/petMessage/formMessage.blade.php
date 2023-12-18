@@ -11,7 +11,7 @@
                         autofocus  
                         id="email" 
                         name="email" 
-                        class=" border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"
+                        class=" border-gray-300 w-full focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"
                         placeholder="Digite aqui seu e-mail">
                     </div>
                     <div class="box-message">
