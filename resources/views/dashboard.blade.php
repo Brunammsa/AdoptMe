@@ -18,7 +18,7 @@
                         {{ $pet->cities->name}} ({{ $pet->cities->states->abbreviation}})
                     </p>
                     <div class="button-responsavel">
-                            <a href="{{route('meusPets.contact')}}">
+                            <a href="{{route('pet.contact', $pet->id)}}">
                                 <img src="{{asset('images/iconeMensagem.png')}}" alt="">
                             </a>
                             <p class="msg-dashboard">Falar com o responsável</p>
