@@ -127,7 +127,7 @@ class PetsController extends Controller
 
     public function allPets(): View
     {
-        $pets = Pets::paginate(6);
+        $pets = Pets::orderBy('created_at', 'desc')->paginate(6);
         $cities = Cities::all();
         $files = Files::class;
     
