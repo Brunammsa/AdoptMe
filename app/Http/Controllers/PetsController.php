@@ -136,9 +136,4 @@ class PetsController extends Controller
                 ->with('files', $files)
                 ->with('cities', $cities);
     }
-
-    public function contact(Pets $id): View
-    {
-        return view('petMessage.formMessage')->with('id', $id);
-    }
 }
