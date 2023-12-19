@@ -15,7 +15,7 @@ class PetsController extends Controller
 {
     public function index(): View
     {
-        $pets = Pets::where('users_id', Auth::user()->id)->paginate(6);;
+        $pets = Pets::where('users_id', Auth::user()->id)->paginate(6);
 
         return view('meusPets.index')->with('pets', $pets);
     }

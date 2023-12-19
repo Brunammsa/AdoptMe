@@ -6,7 +6,7 @@
         </div>
         <div class="pets">
             <ul>
-                @if (empty($pets))
+                @if ($pets->count() === 0)
                     <p>Você não possui pets cadastrados!</p>
                 @else
                     @foreach ($pets as $pet)
